@@ -4,60 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Rice Muslim Student Association</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-new.css">
     <link rel="icon" href="image_files/icons8-masjid-50.png" type="image/png">
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="header-container">
-            <img src="image_files/LOGOS - 1.png" alt="MSA Logo" class="logo" onclick="window.location.href='index.html'">
+            <!-- Logo -->
+            <img src="image_files/LOGOS - 1.png" alt="MSA Logo" class="header-logo" onclick="window.location.href='index-new.html'">
 
-            <img src="image_files/settings.png" alt="Menu" class="menu-icon" id="menuIcon">
+            <!-- Navigation Links -->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="events.html">Events</a></li>
+                <li><a href="prayer-times.html">Prayer Times</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="get-connected.html">Get Connected</a></li>
+            </ul>
 
-            <div class="nav-wrapper" id="navWrapper">
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="prayer-times.html">Prayer Times</a></li>
-                        <li><a href="resources.html">Resources</a></li>
-                        <li><a href="events.html">Events</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="get-connected.html">Get Connected</a></li>
-                    </ul>
-                </nav>
-
-                <div class="prayer-times-widget">
-                    <div class="prayer-item">
-                        <span class="prayer-name">Fajr</span>
-                        <span class="prayer-time">6:56 AM</span>
-                    </div>
-                    <div class="prayer-item">
-                        <span class="prayer-name">Dhuhr</span>
-                        <span class="prayer-time">12:44 PM</span>
-                    </div>
-                    <div class="prayer-item">
-                        <span class="prayer-name">Asr</span>
-                        <span class="prayer-time">3:09 PM</span>
-                    </div>
-                    <div class="prayer-item">
-                        <span class="prayer-name">Maghrib</span>
-                        <span class="prayer-time">5:38 PM</span>
-                    </div>
-                    <div class="prayer-item">
-                        <span class="prayer-name">Isha</span>
-                        <span class="prayer-time">6:50 PM</span>
-                    </div>
-                    <div class="prayer-item">
-                        <span class="jummah">Jummah 1 PM / 2 PM</span>
-                    </div>
+            <!-- Prayer Times Widget -->
+            <div class="prayer-times-header" onclick="window.location.href='prayer-times.html'">
+                <div class="mosque-icon">
+                    <img src="image_files/icons8-masjid-50.png" alt="Mosque" style="width: 24px; height: 24px;">
                 </div>
 
-                <div class="header-buttons">
-                    <a href="contact.html" class="btn btn-contact">Contact Us</a>
-                    <a href="donations.html" class="btn btn-donate">Donate</a>
+                <div class="prayer-item">
+                    <span class="prayer-name">Fajr</span>
+                    <span class="prayer-time">6:56 AM</span>
+                </div>
+
+                <div class="prayer-item">
+                    <span class="prayer-name">Dhuhr</span>
+                    <span class="prayer-time">12:44 PM</span>
+                </div>
+
+                <div class="prayer-item">
+                    <span class="prayer-name">Asr</span>
+                    <span class="prayer-time">3:09 PM</span>
+                </div>
+
+                <div class="prayer-item">
+                    <span class="prayer-name">Maghrib</span>
+                    <span class="prayer-time">5:38 PM</span>
+                </div>
+
+                <div class="prayer-item">
+                    <span class="prayer-name">Isha</span>
+                    <span class="prayer-time">6:50 PM</span>
+                </div>
+
+                <div class="prayer-item jummah-item">
+                    <span class="prayer-time">Jummah 1 PM / 2 PM</span>
                 </div>
             </div>
+
+            <!-- Header Buttons -->
+            <div class="header-buttons">
+                <a href="contact.html" class="btn-contact">Contact Us</a>
+                <a href="donations.html" class="btn-donate">Donate</a>
+            </div>
+
+            <!-- Dark Mode Toggle -->
+            <div class="dark-mode-toggle" id="darkModeToggle">
+                <div class="toggle-circle"></div>
+            </div>
+
+            <!-- Mobile Menu Icon -->
+            <img src="image_files/settings.png" alt="Menu" class="menu-icon" id="menuIcon">
         </div>
     </header>
 
@@ -87,34 +101,37 @@
 
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-left">
-                <img src="image_files/Rice_University_Horizontal_Blue.png" alt="Rice University" class="footer-logo">
-                <p class="footer-text">© Rice Muslim Student Association. All rights reserved.</p>
-            </div>
-            <div class="footer-right">
-                <a href="sitemap.html" class="site-map-link">Site Map</a>
-                <div class="social-icons">
-                    <a href="#" class="social-icon" aria-label="YouTube">
-                        <img src="image_files/youtubelogo.webp" alt="YouTube">
-                    </a>
-                    <a href="#" class="social-icon" aria-label="Instagram">
-                        <img src="image_files/instagramlogo.webp" alt="Instagram">
-                    </a>
-                    <a href="#" class="social-icon" aria-label="GroupMe">
-                        <img src="image_files/gourpmelogo.webp" alt="GroupMe">
-                    </a>
-                    <a href="#" class="social-icon" aria-label="Facebook">
-                        <img src="image_files/facebooklogo.webp" alt="Facebook">
-                    </a>
-                    <a href="#" class="social-icon" aria-label="Listserv">
-                        <img src="image_files/listserv.webp" alt="Listserv">
-                    </a>
-                </div>
+        <div class="footer-container">
+            <!-- Rice Logo -->
+            <img src="image_files/Rice_University_Horizontal_Blue.png" alt="Rice University" class="footer-logo">
+
+            <!-- Copyright Text -->
+            <p class="footer-text">© Rice Muslim Student Association. All rights reserved.</p>
+
+            <!-- Site Map Link -->
+            <a href="sitemap.html" class="footer-sitemap">Site Map</a>
+
+            <!-- Social Media Icons -->
+            <div class="social-icons">
+                <a href="#" class="social-icon" aria-label="YouTube">
+                    <img src="image_files/youtubelogo.webp" alt="YouTube">
+                </a>
+                <a href="#" class="social-icon" aria-label="Instagram">
+                    <img src="image_files/instagramlogo.webp" alt="Instagram">
+                </a>
+                <a href="#" class="social-icon" aria-label="GroupMe">
+                    <img src="image_files/gourpmelogo.webp" alt="GroupMe">
+                </a>
+                <a href="#" class="social-icon" aria-label="Listserv">
+                    <img src="image_files/listserv.webp" alt="Listserv">
+                </a>
+                <a href="#" class="social-icon" aria-label="Facebook">
+                    <img src="image_files/facebooklogo.webp" alt="Facebook">
+                </a>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script-new.js"></script>
 </body>
 </html>

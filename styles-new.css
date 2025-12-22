@@ -4,7 +4,16 @@
 /* ============================================
    FONT IMPORTS
    ============================================ */
-@import url('https://fonts.googleapis.com/css2?family=Jeju+Myeongjo&display=swap');
+/* Jeju Myeongjo - Local Font */
+@font-face {
+    font-family: 'Jeju Myeongjo';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/JejuMyeongjo-Regular.woff2') format('woff2'),
+         url('fonts/JejuMyeongjo-Regular.woff') format('woff'),
+         url('fonts/JejuMyeongjo-Regular.ttf') format('truetype');
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap');
 
 /* ============================================
@@ -62,7 +71,7 @@ body {
 header {
     position: relative;
     width: 100%;
-    height: 123px;
+    height: 95px;
     background: var(--color-white);
     transition: var(--transition-theme);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -79,10 +88,10 @@ header {
 /* Header Logo */
 .header-logo {
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
     left: 16px;
-    top: 11px;
+    top: 10px;
     cursor: pointer;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     transition: var(--transition-theme);
@@ -91,17 +100,17 @@ header {
 /* Navigation Links */
 .nav-links {
     position: absolute;
-    left: 140px;
-    top: 55px;
+    left: 105px;
+    top: 40px;
     display: flex;
-    gap: 26px;
+    gap: 22px;
     list-style: none;
 }
 
 .nav-links a {
     font-family: var(--font-primary);
-    font-size: 12px;
-    line-height: 12px;
+    font-size: 13px;
+    line-height: 13px;
     text-decoration: underline;
     color: var(--color-black);
     transition: opacity 0.3s;
@@ -114,24 +123,30 @@ header {
 /* Prayer Times Widget in Header */
 .prayer-times-header {
     position: absolute;
-    width: 554px;
-    height: 61px;
+    width: 480px;
+    height: 50px;
     left: 50%;
     transform: translateX(-50%);
-    top: 31px;
+    top: 22px;
     background: var(--color-white);
     border: 1px solid var(--color-black);
     border-radius: 25px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     display: flex;
     align-items: center;
-    padding: 0 19px;
-    gap: 15px;
+    padding: 0 15px;
+    gap: 10px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.prayer-times-header:hover {
+    opacity: 0.8;
 }
 
 .prayer-times-header .mosque-icon {
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
     background-size: contain;
 }
 
@@ -144,15 +159,15 @@ header {
 
 .prayer-item .prayer-name {
     font-family: var(--font-primary);
-    font-size: 16px;
-    line-height: 32px;
+    font-size: 13px;
+    line-height: 16px;
     color: var(--color-black);
 }
 
 .prayer-item .prayer-time {
-    font-family: var(--font-secondary);
-    font-size: 13px;
-    line-height: 32px;
+    font-family: var(--font-primary);
+    font-size: 11px;
+    line-height: 14px;
     color: var(--color-black);
 }
 
@@ -167,21 +182,27 @@ header {
     padding-left: 15px;
 }
 
+.prayer-item.jummah-item .prayer-time {
+    font-family: var(--font-primary);
+    font-size: 13px;
+    line-height: 16px;
+}
+
 /* Header Buttons */
 .header-buttons {
     position: absolute;
-    right: 80px;
-    top: 42px;
+    right: 65px;
+    top: 30px;
     display: flex;
-    gap: 18px;
+    gap: 12px;
 }
 
 .btn-contact, .btn-donate {
     font-family: var(--font-primary);
-    font-size: 16px;
-    line-height: 32px;
+    font-size: 13px;
+    line-height: 24px;
     padding: 2px 8px;
-    height: 36px;
+    height: 30px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -196,12 +217,12 @@ header {
 
 .btn-contact {
     background: var(--color-contact-button);
-    width: 92px;
+    width: 82px;
 }
 
 .btn-donate {
     background: var(--color-donate-button);
-    width: 65px;
+    width: 58px;
 }
 
 .btn-contact:hover, .btn-donate:hover {
@@ -213,11 +234,11 @@ header {
 .dark-mode-toggle {
     position: absolute;
     right: 16px;
-    top: 37px;
-    width: 24px;
-    height: 49px;
+    top: 23px;
+    width: 20px;
+    height: 40px;
     background: var(--color-dark-mode-bg);
-    border-radius: 25px;
+    border-radius: 20px;
     cursor: pointer;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     transition: var(--transition-theme);
@@ -225,8 +246,8 @@ header {
 
 .dark-mode-toggle .toggle-circle {
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     left: 2px;
     top: 2px;
     background: var(--color-white);
@@ -238,7 +259,7 @@ header {
 }
 
 .dark-mode-toggle.active .toggle-circle {
-    transform: translateY(27px);
+    transform: translateY(22px);
 }
 
 /* Mobile Menu Icon */
@@ -267,14 +288,14 @@ header {
 
 .hero-arabic {
     font-family: var(--font-primary);
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 30px;
+    line-height: 38px;
     color: var(--color-white);
     margin-bottom: 30px;
 }
 
 .hero-logo {
-    width: 250px;
+    width: 230px;
     max-width: 90%;
     margin: 30px auto;
     display: block;
@@ -282,8 +303,8 @@ header {
 
 .hero-tagline {
     font-family: var(--font-primary);
-    font-size: 18px;
-    line-height: 32px;
+    font-size: 24px;
+    line-height: 34px;
     color: var(--color-white);
     margin-top: 30px;
 }
@@ -301,8 +322,8 @@ header {
 
 .section-title {
     font-family: var(--font-primary);
-    font-size: 48px;
-    line-height: 48px;
+    font-size: 42px;
+    line-height: 42px;
     text-align: center;
     color: var(--color-black);
     margin-bottom: 40px;
@@ -323,24 +344,24 @@ header {
 
 .quote-box .arabic-text {
     font-family: var(--font-primary);
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 20px;
+    line-height: 28px;
     color: var(--color-black);
     margin-bottom: 15px;
 }
 
 .quote-box .reference {
     font-family: var(--font-primary);
-    font-size: 20px;
-    line-height: 32px;
+    font-size: 16px;
+    line-height: 24px;
     color: var(--color-black);
     margin-bottom: 10px;
 }
 
 .quote-box .translation {
     font-family: var(--font-primary);
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 20px;
+    line-height: 28px;
     color: var(--color-black);
 }
 
@@ -349,8 +370,8 @@ header {
     max-width: 1200px;
     margin: 0 auto 60px;
     font-family: var(--font-primary);
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 18px;
+    line-height: 26px;
     text-align: center;
     color: var(--color-black);
 }
@@ -363,12 +384,15 @@ header {
 .cta-section {
     text-align: center;
     margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .cta-text {
     font-family: var(--font-primary);
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 18px;
+    line-height: 26px;
     color: var(--color-black);
     margin-bottom: 20px;
 }
@@ -379,7 +403,7 @@ header {
 footer {
     position: relative;
     width: 100%;
-    height: 141px;
+    height: 100px;
     background: var(--color-footer-bg);
     transition: var(--transition-theme);
 }
@@ -394,29 +418,30 @@ footer {
 
 .footer-logo {
     position: absolute;
-    width: 257px;
-    height: 37px;
+    width: 180px;
+    height: auto;
     left: 15px;
-    top: 52px;
+    top: 35px;
+    object-fit: contain;
 }
 
 .footer-text {
     position: absolute;
     left: 15px;
-    top: 89px;
+    top: 65px;
     font-family: var(--font-primary);
-    font-size: 20px;
-    line-height: 32px;
+    font-size: 14px;
+    line-height: 20px;
     color: var(--color-black);
 }
 
 .footer-sitemap {
     position: absolute;
     right: 15px;
-    top: 22px;
+    top: 15px;
     font-family: var(--font-primary);
-    font-size: 20px;
-    line-height: 32px;
+    font-size: 14px;
+    line-height: 20px;
     text-decoration: underline;
     color: var(--color-black);
     cursor: pointer;
@@ -430,17 +455,17 @@ footer {
 .social-icons {
     position: absolute;
     right: 15px;
-    top: 66px;
+    top: 45px;
     display: flex;
-    gap: 18px;
+    gap: 12px;
 }
 
 .social-icon {
-    width: 50px;
-    height: 50px;
+    width: 36px;
+    height: 36px;
     background: var(--color-black);
     border: 1px solid var(--color-black);
-    border-radius: 45px;
+    border-radius: 18px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     display: flex;
     align-items: center;
@@ -556,7 +581,18 @@ footer {
         margin: 20px auto;
     }
 
-    .footer-logo,
+    .footer-logo {
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
+        width: 180px;
+        height: auto;
+        max-width: 100%;
+        margin: 0 auto;
+        display: block;
+    }
+
     .footer-text,
     .footer-sitemap {
         position: relative;
