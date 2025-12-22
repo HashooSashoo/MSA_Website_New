@@ -1,0 +1,604 @@
+/* Rice MSA Website - Rebuilt from Figma Design */
+/* Author: Claude Code | Based on Figma Export */
+
+/* ============================================
+   FONT IMPORTS
+   ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Jeju+Myeongjo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap');
+
+/* ============================================
+   CSS VARIABLES & ROOT
+   ============================================ */
+:root {
+    /* Colors from Figma */
+    --color-contact-button: #FF7E7E;
+    --color-donate-button: #93CBF8;
+    --color-footer-bg: #93CBF8;
+    --color-quote-bg: #ECECEC;
+    --color-black: #000000;
+    --color-white: #FFFFFF;
+    --color-gray-light: #D9D9D9;
+    --color-gray-text: #333333;
+    --color-dark-mode-bg: #262626;
+
+    /* Fonts */
+    --font-primary: 'Jeju Myeongjo', serif;
+    --font-secondary: 'Alexandria', sans-serif;
+
+    /* Transitions */
+    --transition-theme: all 0.3s ease;
+}
+
+/* Dark Mode Variables */
+[data-theme="dark"] {
+    --color-white: #1a1a1a;
+    --color-black: #ffffff;
+    --color-quote-bg: #2a2a2a;
+    --color-gray-text: #e0e0e0;
+    --color-gray-light: #3a3a3a;
+}
+
+/* ============================================
+   GLOBAL RESET & BASE STYLES
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    background: var(--color-white);
+    color: var(--color-black);
+    overflow-x: hidden;
+    transition: var(--transition-theme);
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+header {
+    position: relative;
+    width: 100%;
+    height: 123px;
+    background: var(--color-white);
+    transition: var(--transition-theme);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 100%;
+    padding: 0 16px;
+}
+
+/* Header Logo */
+.header-logo {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 16px;
+    top: 11px;
+    cursor: pointer;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transition: var(--transition-theme);
+}
+
+/* Navigation Links */
+.nav-links {
+    position: absolute;
+    left: 140px;
+    top: 55px;
+    display: flex;
+    gap: 26px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-family: var(--font-primary);
+    font-size: 12px;
+    line-height: 12px;
+    text-decoration: underline;
+    color: var(--color-black);
+    transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.7;
+}
+
+/* Prayer Times Widget in Header */
+.prayer-times-header {
+    position: absolute;
+    width: 554px;
+    height: 61px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 31px;
+    background: var(--color-white);
+    border: 1px solid var(--color-black);
+    border-radius: 25px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    display: flex;
+    align-items: center;
+    padding: 0 19px;
+    gap: 15px;
+}
+
+.prayer-times-header .mosque-icon {
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+}
+
+.prayer-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.prayer-item .prayer-name {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    line-height: 32px;
+    color: var(--color-black);
+}
+
+.prayer-item .prayer-time {
+    font-family: var(--font-secondary);
+    font-size: 13px;
+    line-height: 32px;
+    color: var(--color-black);
+}
+
+.prayer-divider {
+    width: 1px;
+    height: 45px;
+    background: var(--color-black);
+}
+
+.prayer-item.jummah-item {
+    border-left: 1px solid var(--color-black);
+    padding-left: 15px;
+}
+
+/* Header Buttons */
+.header-buttons {
+    position: absolute;
+    right: 80px;
+    top: 42px;
+    display: flex;
+    gap: 18px;
+}
+
+.btn-contact, .btn-donate {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    line-height: 32px;
+    padding: 2px 8px;
+    height: 36px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--color-black);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-contact {
+    background: var(--color-contact-button);
+    width: 92px;
+}
+
+.btn-donate {
+    background: var(--color-donate-button);
+    width: 65px;
+}
+
+.btn-contact:hover, .btn-donate:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+    position: absolute;
+    right: 16px;
+    top: 37px;
+    width: 24px;
+    height: 49px;
+    background: var(--color-dark-mode-bg);
+    border-radius: 25px;
+    cursor: pointer;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transition: var(--transition-theme);
+}
+
+.dark-mode-toggle .toggle-circle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 2px;
+    top: 2px;
+    background: var(--color-white);
+    background-image: url('image_files/moonandstars.png');
+    background-size: cover;
+    border: 1px solid var(--color-black);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.dark-mode-toggle.active .toggle-circle {
+    transform: translateY(27px);
+}
+
+/* Mobile Menu Icon */
+.menu-icon {
+    display: none;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero-section {
+    position: relative;
+    width: 100%;
+    background: var(--color-black);
+    padding: 80px 20px;
+    text-align: center;
+    transition: var(--transition-theme);
+}
+
+.hero-arabic {
+    font-family: var(--font-primary);
+    font-size: 24px;
+    line-height: 32px;
+    color: var(--color-white);
+    margin-bottom: 30px;
+}
+
+.hero-logo {
+    width: 250px;
+    max-width: 90%;
+    margin: 30px auto;
+    display: block;
+}
+
+.hero-tagline {
+    font-family: var(--font-primary);
+    font-size: 18px;
+    line-height: 32px;
+    color: var(--color-white);
+    margin-top: 30px;
+}
+
+/* ============================================
+   WHO WE ARE SECTION
+   ============================================ */
+.who-we-are-section {
+    position: relative;
+    width: 100%;
+    background: var(--color-white);
+    padding: 60px 20px;
+    transition: var(--transition-theme);
+}
+
+.section-title {
+    font-family: var(--font-primary);
+    font-size: 48px;
+    line-height: 48px;
+    text-align: center;
+    color: var(--color-black);
+    margin-bottom: 40px;
+}
+
+/* Quote Box */
+.quote-box {
+    position: relative;
+    max-width: 1019px;
+    margin: 0 auto 60px;
+    background: var(--color-quote-bg);
+    box-shadow: 0px 4px 9px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 200px;
+    padding: 40px 60px;
+    text-align: center;
+    transition: var(--transition-theme);
+}
+
+.quote-box .arabic-text {
+    font-family: var(--font-primary);
+    font-size: 24px;
+    line-height: 32px;
+    color: var(--color-black);
+    margin-bottom: 15px;
+}
+
+.quote-box .reference {
+    font-family: var(--font-primary);
+    font-size: 20px;
+    line-height: 32px;
+    color: var(--color-black);
+    margin-bottom: 10px;
+}
+
+.quote-box .translation {
+    font-family: var(--font-primary);
+    font-size: 24px;
+    line-height: 32px;
+    color: var(--color-black);
+}
+
+/* Section Description */
+.section-description {
+    max-width: 1200px;
+    margin: 0 auto 60px;
+    font-family: var(--font-primary);
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    color: var(--color-black);
+}
+
+.section-description p {
+    margin-bottom: 20px;
+}
+
+/* CTA Section */
+.cta-section {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.cta-text {
+    font-family: var(--font-primary);
+    font-size: 24px;
+    line-height: 32px;
+    color: var(--color-black);
+    margin-bottom: 20px;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+    position: relative;
+    width: 100%;
+    height: 141px;
+    background: var(--color-footer-bg);
+    transition: var(--transition-theme);
+}
+
+.footer-container {
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 100%;
+    padding: 0 15px;
+}
+
+.footer-logo {
+    position: absolute;
+    width: 257px;
+    height: 37px;
+    left: 15px;
+    top: 52px;
+}
+
+.footer-text {
+    position: absolute;
+    left: 15px;
+    top: 89px;
+    font-family: var(--font-primary);
+    font-size: 20px;
+    line-height: 32px;
+    color: var(--color-black);
+}
+
+.footer-sitemap {
+    position: absolute;
+    right: 15px;
+    top: 22px;
+    font-family: var(--font-primary);
+    font-size: 20px;
+    line-height: 32px;
+    text-decoration: underline;
+    color: var(--color-black);
+    cursor: pointer;
+}
+
+.footer-sitemap:hover {
+    opacity: 0.7;
+}
+
+/* Social Icons */
+.social-icons {
+    position: absolute;
+    right: 15px;
+    top: 66px;
+    display: flex;
+    gap: 18px;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--color-black);
+    border: 1px solid var(--color-black);
+    border-radius: 45px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+    overflow: hidden;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.social-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 1200px) {
+    .prayer-times-header {
+        width: 90%;
+    }
+
+    .nav-links {
+        font-size: 11px;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 968px) {
+    header {
+        height: auto;
+        min-height: 123px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .header-container {
+        position: relative;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 123px;
+        width: 100%;
+        flex-direction: column;
+        background: var(--color-white);
+        padding: 20px;
+        gap: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .prayer-times-header {
+        position: relative;
+        left: 0;
+        transform: none;
+        width: 100%;
+        margin: 20px auto;
+        flex-wrap: wrap;
+        height: auto;
+        padding: 15px;
+    }
+
+    .header-buttons {
+        position: relative;
+        right: auto;
+        top: auto;
+        margin: 20px auto;
+        justify-content: center;
+    }
+
+    .dark-mode-toggle {
+        right: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 36px;
+    }
+
+    .quote-box {
+        border-radius: 50px;
+        padding: 30px 20px;
+    }
+
+    .quote-box .arabic-text,
+    .quote-box .translation {
+        font-size: 18px;
+    }
+
+    .section-description {
+        font-size: 18px;
+    }
+
+    .social-icons {
+        position: relative;
+        right: auto;
+        top: auto;
+        justify-content: center;
+        margin: 20px auto;
+    }
+
+    .footer-logo,
+    .footer-text,
+    .footer-sitemap {
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
+        text-align: center;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    footer {
+        height: auto;
+        padding: 30px 20px;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-arabic {
+        font-size: 18px;
+    }
+
+    .hero-tagline {
+        font-size: 14px;
+    }
+
+    .prayer-times-header {
+        font-size: 12px;
+    }
+
+    .prayer-item .prayer-name {
+        font-size: 12px;
+    }
+
+    .prayer-item .prayer-time {
+        font-size: 11px;
+    }
+}

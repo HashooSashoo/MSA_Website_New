@@ -1,0 +1,1381 @@
+/* Prayer Times */
+
+position: relative;
+width: 1440px;
+height: 2528px;
+
+background: #FFFFFF;
+
+
+/* Questions Blurb */
+
+position: absolute;
+width: 1440px;
+height: 306px;
+left: 0px;
+top: 123px;
+
+
+
+/* Rectangle 7 */
+
+position: absolute;
+width: 1440px;
+height: 233px;
+left: 0px;
+top: 0px;
+
+background: #FFFFFF;
+
+
+/* Prayer Times */
+
+position: absolute;
+width: 283px;
+height: 48px;
+left: 578px;
+top: 37px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 48px;
+line-height: 48px;
+/* identical to box height */
+display: flex;
+align-items: center;
+
+color: #000000;
+
+
+
+/* Questions Blurb */
+
+position: absolute;
+width: 1237px;
+height: 53px;
+left: 101px;
+top: 159px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 120%;
+/* or 38px */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* Header */
+
+position: absolute;
+width: 1440px;
+height: 123px;
+left: 0px;
+top: 0px;
+
+
+
+/* Rectangle 1 */
+
+position: absolute;
+width: 1452px;
+height: 123px;
+left: 0px;
+top: 0px;
+
+background: #FFFFFF;
+
+
+/* Header Logo */
+
+position: absolute;
+width: 100px;
+height: 100px;
+left: 16px;
+top: 11px;
+
+background: url(LOGOS - 1.png);
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+
+/* Link Names */
+
+position: absolute;
+width: 417px;
+height: 12px;
+left: 140px;
+top: 55px;
+
+
+
+/* Resources */
+
+position: absolute;
+width: 53px;
+height: 12px;
+left: 159px;
+top: 0px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 12px;
+/* identical to box height */
+display: flex;
+align-items: center;
+text-decoration-line: underline;
+
+color: #000000;
+
+
+
+/* Prayer Times */
+
+position: absolute;
+width: 71px;
+height: 12px;
+left: 62px;
+top: 0px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 12px;
+/* identical to box height */
+display: flex;
+align-items: center;
+text-decoration-line: underline;
+
+color: #000000;
+
+
+
+/* Events */
+
+position: absolute;
+width: 36px;
+height: 12px;
+left: 0px;
+top: 0px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 12px;
+/* identical to box height */
+display: flex;
+align-items: center;
+text-decoration-line: underline;
+
+color: #000000;
+
+
+
+/* About Us */
+
+position: absolute;
+width: 48px;
+height: 12px;
+left: 238px;
+top: 0px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 12px;
+/* identical to box height */
+display: flex;
+align-items: center;
+text-decoration-line: underline;
+
+color: #000000;
+
+
+
+/* Get Connected */
+
+position: absolute;
+width: 76px;
+height: 12px;
+left: 312px;
+top: 0px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 12px;
+/* identical to box height */
+display: flex;
+align-items: center;
+text-decoration-line: underline;
+
+color: #000000;
+
+
+
+/* Frame 2 */
+
+position: absolute;
+width: 92px;
+height: 36px;
+left: 1190px;
+top: 42px;
+
+background: #FF7E7E;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 5px;
+
+
+/* Contact Us */
+
+position: absolute;
+width: 76px;
+height: 32px;
+left: 8px;
+top: 2px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 32px;
+/* identical to box height, or 200% */
+display: flex;
+align-items: center;
+
+color: #000000;
+
+
+
+/* Frame 3 */
+
+position: absolute;
+width: 65px;
+height: 36px;
+left: 1300px;
+top: 42px;
+
+background: #93CBF8;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 5px;
+
+
+/* Donate */
+
+position: absolute;
+width: 49px;
+height: 32px;
+left: 8px;
+top: 2px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 32px;
+/* identical to box height, or 200% */
+display: flex;
+align-items: center;
+
+color: #000000;
+
+
+
+/* Prayer Times */
+
+position: absolute;
+width: 554px;
+height: 61px;
+left: 557px;
+top: 31px;
+
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+
+/* Prayer Times */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 554px;
+height: 61px;
+left: 0px;
+top: 0px;
+
+background: #FFFFFF;
+border: 1px solid #000000;
+border-radius: 25px;
+
+
+/* Rectangle 4 */
+
+position: absolute;
+width: 30px;
+height: 30px;
+left: 19px;
+top: 14px;
+
+background: url(icons8-masjid-50.png);
+
+
+/* Fajr */
+
+position: absolute;
+width: 53px;
+height: 15px;
+left: 72px;
+top: 14px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 32px;
+/* or 200% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* Isha */
+
+position: absolute;
+width: 53px;
+height: 15px;
+left: 357px;
+top: 14px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 32px;
+/* or 200% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* Maghrib */
+
+position: absolute;
+width: 69px;
+height: 15px;
+left: 278px;
+top: 14px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 32px;
+/* or 200% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* Jummah */
+
+position: absolute;
+width: 69px;
+height: 15px;
+left: 453px;
+top: 15px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 32px;
+/* or 200% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* Asr */
+
+position: absolute;
+width: 53px;
+height: 15px;
+left: 212px;
+top: 15px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 32px;
+/* or 200% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* Dhuhr */
+
+position: absolute;
+width: 53px;
+height: 15px;
+left: 141px;
+top: 14px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 32px;
+/* or 200% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* 4:54 AM */
+
+position: absolute;
+width: 71px;
+height: 18px;
+left: 63px;
+top: 35px;
+
+font-family: 'Alexandria';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 32px;
+/* or 246% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* 1:41 PM */
+
+position: absolute;
+width: 71px;
+height: 18px;
+left: 132px;
+top: 35px;
+
+font-family: 'Alexandria';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 32px;
+/* or 246% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* 3:99 PM */
+
+position: absolute;
+width: 71px;
+height: 18px;
+left: 203px;
+top: 35px;
+
+font-family: 'Alexandria';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 32px;
+/* or 246% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* 6:70 PM */
+
+position: absolute;
+width: 71px;
+height: 18px;
+left: 277px;
+top: 35px;
+
+font-family: 'Alexandria';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 32px;
+/* or 246% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* 9:11 PM */
+
+position: absolute;
+width: 71px;
+height: 18px;
+left: 348px;
+top: 35px;
+
+font-family: 'Alexandria';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 32px;
+/* or 246% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* 1 PM / 2 PM */
+
+position: absolute;
+width: 80px;
+height: 18px;
+left: 448px;
+top: 35px;
+
+font-family: 'Alexandria';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 32px;
+/* or 246% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* Vector 1 */
+
+position: absolute;
+width: 0px;
+height: 45px;
+left: 429px;
+top: 8px;
+
+border: 1px solid #000000;
+
+
+/* Dark Mode Toggle */
+
+position: absolute;
+width: 24px;
+height: 49px;
+left: 1383px;
+top: 37px;
+
+
+
+/* Rectangle 30 */
+
+position: absolute;
+width: 24px;
+height: 49px;
+left: 0px;
+top: 0px;
+
+background: #262626;
+border-radius: 25px;
+
+
+/* Ellipse 4 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 20px;
+height: 20px;
+left: 2px;
+top: 2px;
+
+background: url(moonandstars.png), #FFFFFF;
+border: 1px solid #000000;
+
+
+/* Prayer Time Section */
+
+position: absolute;
+width: 1440px;
+height: 319px;
+left: 0px;
+top: 387px;
+
+
+
+/* Rectangle 24 */
+
+position: absolute;
+width: 1440px;
+height: 319px;
+left: 0px;
+top: 0px;
+
+background: #FFFFFF;
+
+
+/* Full Prayer Time Menu */
+
+position: absolute;
+width: 1028px;
+height: 234px;
+left: 206px;
+top: 43px;
+
+
+
+/* Prayer Times */
+
+position: absolute;
+width: 1001px;
+height: 202px;
+left: 0px;
+top: 0px;
+
+
+
+/* Prayer Times */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 1001px;
+height: 202px;
+left: 0px;
+top: 0px;
+
+background: #FFFFFF;
+border: 1px solid #000000;
+border-radius: 25px;
+
+
+/* Rectangle 4 */
+
+position: absolute;
+width: 149px;
+height: 149px;
+left: 32px;
+top: 26px;
+
+background: url(mosque_4407132.png);
+
+
+/* Prayer Names and Times */
+
+position: absolute;
+width: 714px;
+height: 144px;
+left: 196px;
+top: 24px;
+
+
+
+/* Fajr Time */
+
+position: absolute;
+width: 102px;
+height: 142px;
+left: 0px;
+top: 2px;
+
+
+
+/* Fajr */
+
+position: absolute;
+width: 53px;
+height: 15px;
+left: calc(50% - 53px/2 - 0.5px);
+top: 0px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 32px;
+/* or 133% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* 4:54 AM */
+
+position: absolute;
+width: 85px;
+height: 32px;
+left: calc(50% - 85px/2 - 0.5px);
+top: 48px;
+
+font-family: 'Alexandria';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 32px;
+/* identical to box height, or 160% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* Dhuhr Time */
+
+position: absolute;
+width: 107px;
+height: 142px;
+left: 111px;
+top: 2px;
+
+
+
+/* Dhuhr */
+
+position: absolute;
+width: 69px;
+height: 15px;
+left: calc(50% - 69px/2);
+top: 0px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 32px;
+/* or 133% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* 4:54 AM */
+
+position: absolute;
+width: 85px;
+height: 32px;
+left: calc(50% - 85px/2);
+top: 48px;
+
+font-family: 'Alexandria';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 32px;
+/* identical to box height, or 160% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* Dhuhr Time */
+
+position: absolute;
+width: 107px;
+height: 142px;
+left: 218px;
+top: 2px;
+
+
+
+/* Asr */
+
+position: absolute;
+width: 69px;
+height: 15px;
+left: calc(50% - 69px/2);
+top: 0px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 32px;
+/* or 133% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* 4:54 AM */
+
+position: absolute;
+width: 85px;
+height: 32px;
+left: calc(50% - 85px/2);
+top: 48px;
+
+font-family: 'Alexandria';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 32px;
+/* identical to box height, or 160% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* Dhuhr Time */
+
+position: absolute;
+width: 107px;
+height: 142px;
+left: 333px;
+top: 2px;
+
+
+
+/* Maghrib */
+
+position: absolute;
+width: 88px;
+height: 15px;
+left: calc(50% - 88px/2 - 1.5px);
+top: 0px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 32px;
+/* or 133% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* 4:54 AM */
+
+position: absolute;
+width: 85px;
+height: 32px;
+left: calc(50% - 85px/2);
+top: 48px;
+
+font-family: 'Alexandria';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 32px;
+/* identical to box height, or 160% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* Jummah Time */
+
+position: absolute;
+width: 80px;
+height: 141px;
+left: 634px;
+top: 3px;
+
+
+
+/* Jummah */
+
+position: absolute;
+width: 109px;
+height: 15px;
+left: 0px;
+top: 0px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 32px;
+/* or 133% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* 1 PM / 2 PM */
+
+position: absolute;
+width: 114px;
+height: 18px;
+left: 0px;
+top: 53px;
+
+font-family: 'Alexandria';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 32px;
+/* or 160% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* Dhuhr Time */
+
+position: absolute;
+width: 107px;
+height: 142px;
+left: 449px;
+top: 2px;
+
+
+
+/* Isha */
+
+position: absolute;
+width: 88px;
+height: 15px;
+left: calc(50% - 88px/2 - 1.5px);
+top: 0px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 32px;
+/* or 133% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* 4:54 AM */
+
+position: absolute;
+width: 85px;
+height: 32px;
+left: calc(50% - 85px/2);
+top: 48px;
+
+font-family: 'Alexandria';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 32px;
+/* identical to box height, or 160% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* Vector 1 */
+
+position: absolute;
+width: 0px;
+height: 174px;
+left: 772px;
+top: 14px;
+
+border: 1px solid #000000;
+
+
+/* Ellipse 3 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 79px;
+height: 79px;
+left: 949px;
+top: 155px;
+
+background: url(settings.png), #FFFFFF;
+border: 1px solid #000000;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+
+/* Questions Blurb */
+
+position: absolute;
+width: 1440px;
+height: 390px;
+left: 0px;
+top: 706px;
+
+
+
+/* Rectangle 7 */
+
+position: absolute;
+width: 1440px;
+height: 390px;
+left: 0px;
+top: 0px;
+
+background: #FFFFFF;
+
+
+/* Jummah Prayer */
+
+position: absolute;
+width: 323px;
+height: 48px;
+left: 558px;
+top: 42px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 48px;
+line-height: 48px;
+/* identical to box height */
+display: flex;
+align-items: center;
+
+color: #000000;
+
+
+
+/* Questions Blurb */
+
+position: absolute;
+width: 1237px;
+height: 53px;
+left: 101px;
+top: 207px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 140%;
+/* or 45px */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* Rooms Section */
+
+position: absolute;
+width: 1440px;
+height: 552px;
+left: 0px;
+top: 1096px;
+
+
+
+/* Rectangle 26 */
+
+position: absolute;
+width: 1440px;
+height: 625px;
+left: 0px;
+top: 0px;
+
+background: #FFFFFF;
+
+
+/* Kyle Morrow Room */
+
+position: absolute;
+width: 504px;
+height: 464px;
+left: 150px;
+top: 55px;
+
+
+
+/* Rectangle 25 */
+
+position: absolute;
+width: 504px;
+height: 404px;
+left: 0px;
+top: 0px;
+
+background: #D9D9D9;
+
+
+/* Kyle Morrow Room - 3rd Floor of Fondren Library */
+
+position: absolute;
+width: 471px;
+height: 60px;
+left: 16px;
+top: 404px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 32px;
+/* or 160% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* Duncan Library Room */
+
+position: absolute;
+width: 504px;
+height: 464px;
+left: 784px;
+top: 88px;
+
+
+
+/* Rectangle 25 */
+
+position: absolute;
+width: 504px;
+height: 404px;
+left: 0px;
+top: -33px;
+
+background: #D9D9D9;
+
+
+/* Duncan Library - 2nd Floor of West Servery */
+
+position: absolute;
+width: 471px;
+height: 60px;
+left: 16px;
+top: 371px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 32px;
+/* or 160% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* Frame 7 */
+
+position: absolute;
+width: 1437px;
+height: 313px;
+left: 3px;
+top: 1648px;
+
+
+
+/* Rectangle 23 */
+
+position: absolute;
+width: 1437px;
+height: 274px;
+left: 0px;
+top: 0px;
+
+background: #FFFFFF;
+
+
+/* Need help regarding Jummah?Let us know. */
+
+position: absolute;
+width: 1189px;
+height: 125px;
+left: 131px;
+top: 43px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 48px;
+line-height: 32px;
+/* or 67% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* Frame 2 */
+
+position: absolute;
+width: 227px;
+height: 72px;
+left: 625px;
+top: 168px;
+
+background: #FF7E7E;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 5px;
+
+
+/* Contact Us */
+
+position: absolute;
+width: 171px;
+height: 32px;
+left: 28px;
+top: 20px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 36px;
+line-height: 32px;
+/* identical to box height, or 89% */
+display: flex;
+align-items: center;
+
+color: #000000;
+
+
+
+/* Hadith Section */
+
+position: absolute;
+width: 1440px;
+height: 421px;
+left: 2px;
+top: 1922px;
+
+
+
+/* Rectangle 27 */
+
+position: absolute;
+width: 1440px;
+height: 421px;
+left: 0px;
+top: 0px;
+
+background: #FFFFFF;
+
+
+/* Frame 7 */
+
+position: absolute;
+width: 1097px;
+height: 323px;
+left: calc(50% - 1097px/2 - 0.5px);
+bottom: 54px;
+
+
+
+/* Rectangle 5 */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+background: #ECECEC;
+box-shadow: 0px 4px 9px 3px rgba(0, 0, 0, 0.25);
+border-radius: 200px;
+
+
+/* "‏ مَنِ اغْتَسَلَ يَوْمَ الْجُمُعَةِ، وَتَطَهَّرَ بِمَا اسْتَطَاعَ مِنْ طُهْرٍ، ثُمَّ ادَّهَنَ أَوْ مَسَّ مِنْ طِيبٍ، ثُمَّ رَاحَ فَلَمْ يُفَرِّقْ بَيْنَ اثْنَيْنِ، فَصَلَّى مَا كُتِبَ لَهُ، ثُمَّ إِذَا خَرَجَ الإِمَامُ أَنْصَتَ، غُفِرَ لَهُ مَا بَيْنَهُ وَبَيْنَ الْجُمُعَةِ الأُخْرَى ‏"‏‏. [Sahih al-Bukhari (11:34)] "Anyone who takes a bath on Friday and cleans himself as much as he can and puts oil (on his hair) or scents himself; and then proceeds for the prayer and does not force his way between two persons (assembled in the mosque for the Friday prayer), and prays as much as is written for him and remains quiet when the Imam delivers the Khutba, all his sins in between the present and the last Friday will be forgiven." */
+
+position: absolute;
+left: 10.57%;
+right: 10.48%;
+top: 9.02%;
+bottom: 13.11%;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 32px;
+/* or 200% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+

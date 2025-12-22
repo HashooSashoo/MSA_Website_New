@@ -1,0 +1,1117 @@
+/* Resources */
+
+position: relative;
+width: 1440px;
+height: 3841px;
+
+background: #FFFFFF;
+
+
+/* Quran Section */
+
+position: absolute;
+width: 1442px;
+height: 408px;
+left: -3px;
+top: 547px;
+
+
+
+/* Rectangle 32 */
+
+position: absolute;
+width: 1442px;
+height: 408px;
+left: 0px;
+top: 0px;
+
+background: #FFFFFF;
+
+
+/* Quran Verse */
+
+position: absolute;
+width: 1019px;
+height: 177px;
+left: 211px;
+top: 116px;
+
+
+
+/* Frame 5 */
+
+position: absolute;
+width: 1019px;
+height: 288px;
+left: 0px;
+top: -55px;
+
+
+
+/* Rectangle 5 */
+
+position: absolute;
+left: -1.47%;
+right: -1.96%;
+top: 0%;
+bottom: 0%;
+
+background: #ECECEC;
+box-shadow: 0px 4px 9px 3px rgba(0, 0, 0, 0.25);
+border-radius: 200px;
+
+
+/* وَأَوْحَيْنَآ إِلَىٰ مُوسَىٰ وَأَخِيهِ أَن تَبَوَّءَا لِقَوْمِكُمَا بِمِصْرَ بُيُوتًۭا وَٱجْعَلُوا۟ بُيُوتَكُمْ قِبْلَةًۭ وَأَقِيمُوا۟ ٱلصَّلَوٰةَ ۗ وَبَشِّرِ ٱلْمُؤْمِنِينَ [Surah Yunus (10:87)] We revealed to Moses and his brother, “Appoint houses for your people in Egypt. Turn these houses into places of worship, establish prayer, and give good news to the believers!” */
+
+position: absolute;
+left: 5.99%;
+right: 5.89%;
+top: -8.33%;
+bottom: -8.33%;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 32px;
+/* or 133% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* Header */
+
+position: absolute;
+width: 1440px;
+height: 123px;
+left: -1px;
+top: 0px;
+
+
+
+/* Rectangle 1 */
+
+position: absolute;
+width: 1452px;
+height: 123px;
+left: 0px;
+top: 0px;
+
+background: #FFFFFF;
+
+
+/* Header Logo */
+
+position: absolute;
+width: 100px;
+height: 100px;
+left: 16px;
+top: 11px;
+
+background: url(LOGOS - 1.png);
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+
+/* Link Names */
+
+position: absolute;
+width: 417px;
+height: 12px;
+left: 140px;
+top: 55px;
+
+
+
+/* Resources */
+
+position: absolute;
+width: 53px;
+height: 12px;
+left: 159px;
+top: 0px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 12px;
+/* identical to box height */
+display: flex;
+align-items: center;
+text-decoration-line: underline;
+
+color: #000000;
+
+
+
+/* Prayer Times */
+
+position: absolute;
+width: 71px;
+height: 12px;
+left: 62px;
+top: 0px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 12px;
+/* identical to box height */
+display: flex;
+align-items: center;
+text-decoration-line: underline;
+
+color: #000000;
+
+
+
+/* Events */
+
+position: absolute;
+width: 36px;
+height: 12px;
+left: 0px;
+top: 0px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 12px;
+/* identical to box height */
+display: flex;
+align-items: center;
+text-decoration-line: underline;
+
+color: #000000;
+
+
+
+/* About Us */
+
+position: absolute;
+width: 48px;
+height: 12px;
+left: 238px;
+top: 0px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 12px;
+/* identical to box height */
+display: flex;
+align-items: center;
+text-decoration-line: underline;
+
+color: #000000;
+
+
+
+/* Get Connected */
+
+position: absolute;
+width: 76px;
+height: 12px;
+left: 312px;
+top: 0px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 12px;
+/* identical to box height */
+display: flex;
+align-items: center;
+text-decoration-line: underline;
+
+color: #000000;
+
+
+
+/* Frame 2 */
+
+position: absolute;
+width: 92px;
+height: 36px;
+left: 1190px;
+top: 42px;
+
+background: #FF7E7E;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 5px;
+
+
+/* Contact Us */
+
+position: absolute;
+width: 76px;
+height: 32px;
+left: 8px;
+top: 2px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 32px;
+/* identical to box height, or 200% */
+display: flex;
+align-items: center;
+
+color: #000000;
+
+
+
+/* Frame 3 */
+
+position: absolute;
+width: 65px;
+height: 36px;
+left: 1300px;
+top: 42px;
+
+background: #93CBF8;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 5px;
+
+
+/* Donate */
+
+position: absolute;
+width: 49px;
+height: 32px;
+left: 8px;
+top: 2px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 32px;
+/* identical to box height, or 200% */
+display: flex;
+align-items: center;
+
+color: #000000;
+
+
+
+/* Prayer Times */
+
+position: absolute;
+width: 554px;
+height: 61px;
+left: 557px;
+top: 31px;
+
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+
+/* Prayer Times */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 554px;
+height: 61px;
+left: 0px;
+top: 0px;
+
+background: #FFFFFF;
+border: 1px solid #000000;
+border-radius: 25px;
+
+
+/* Rectangle 4 */
+
+position: absolute;
+width: 30px;
+height: 30px;
+left: 19px;
+top: 14px;
+
+background: url(icons8-masjid-50.png);
+
+
+/* Fajr */
+
+position: absolute;
+width: 53px;
+height: 15px;
+left: 72px;
+top: 14px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 32px;
+/* or 200% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* Isha */
+
+position: absolute;
+width: 53px;
+height: 15px;
+left: 357px;
+top: 14px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 32px;
+/* or 200% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* Maghrib */
+
+position: absolute;
+width: 69px;
+height: 15px;
+left: 278px;
+top: 14px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 32px;
+/* or 200% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* Jummah */
+
+position: absolute;
+width: 69px;
+height: 15px;
+left: 453px;
+top: 15px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 32px;
+/* or 200% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* Asr */
+
+position: absolute;
+width: 53px;
+height: 15px;
+left: 212px;
+top: 15px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 32px;
+/* or 200% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* Dhuhr */
+
+position: absolute;
+width: 53px;
+height: 15px;
+left: 141px;
+top: 14px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 32px;
+/* or 200% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* 4:54 AM */
+
+position: absolute;
+width: 71px;
+height: 18px;
+left: 63px;
+top: 35px;
+
+font-family: 'Alexandria';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 32px;
+/* or 246% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* 1:41 PM */
+
+position: absolute;
+width: 71px;
+height: 18px;
+left: 132px;
+top: 35px;
+
+font-family: 'Alexandria';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 32px;
+/* or 246% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* 3:99 PM */
+
+position: absolute;
+width: 71px;
+height: 18px;
+left: 203px;
+top: 35px;
+
+font-family: 'Alexandria';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 32px;
+/* or 246% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* 6:70 PM */
+
+position: absolute;
+width: 71px;
+height: 18px;
+left: 277px;
+top: 35px;
+
+font-family: 'Alexandria';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 32px;
+/* or 246% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* 9:11 PM */
+
+position: absolute;
+width: 71px;
+height: 18px;
+left: 348px;
+top: 35px;
+
+font-family: 'Alexandria';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 32px;
+/* or 246% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* 1 PM / 2 PM */
+
+position: absolute;
+width: 80px;
+height: 18px;
+left: 448px;
+top: 35px;
+
+font-family: 'Alexandria';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 32px;
+/* or 246% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* Vector 1 */
+
+position: absolute;
+width: 0px;
+height: 45px;
+left: 429px;
+top: 8px;
+
+border: 1px solid #000000;
+
+
+/* Dark Mode Toggle */
+
+position: absolute;
+width: 24px;
+height: 49px;
+left: 1383px;
+top: 37px;
+
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+
+/* Rectangle 30 */
+
+position: absolute;
+width: 24px;
+height: 49px;
+left: 0px;
+top: 0px;
+
+background: #262626;
+border-radius: 25px;
+
+
+/* Ellipse 4 */
+
+position: absolute;
+width: 20px;
+height: 20px;
+left: 2px;
+top: 2px;
+
+background: url(moonandstars.png), #FFFFFF;
+box-shadow: 0px 4px 4px #000000;
+
+
+/* Footer */
+
+position: absolute;
+width: 1442px;
+height: 141px;
+left: -1px;
+top: 3700px;
+
+
+
+/* Rectangle 8 */
+
+position: absolute;
+width: 1442px;
+height: 141px;
+left: 0px;
+top: 0px;
+
+background: #93CBF8;
+
+
+/* Rectangle 9 */
+
+position: absolute;
+width: 257px;
+height: 37px;
+left: 15px;
+top: 52px;
+
+background: url(Rice_University_Horizontal_Blue.png);
+
+
+/* © Rice Muslim Student Association. All rights reserved. */
+
+position: absolute;
+width: 574px;
+height: 41px;
+left: 15px;
+top: 89px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 32px;
+/* or 160% */
+display: flex;
+align-items: center;
+
+color: #000000;
+
+
+
+/* Site Map */
+
+position: absolute;
+width: 173px;
+height: 31px;
+left: 1247px;
+top: 22px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 32px;
+/* or 160% */
+display: flex;
+align-items: center;
+text-align: right;
+text-decoration-line: underline;
+
+color: #000000;
+
+
+
+/* Rectangle 11 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 50px;
+height: 49px;
+left: 1303px;
+top: 67px;
+
+background: url(gourpmelogo.png), #000000;
+border: 1px solid #000000;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 45px;
+
+
+/* Rectangle 13 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 50px;
+height: 50px;
+left: 1371px;
+top: 66px;
+
+background: url(facebooklogo.png), #000000;
+border: 1px solid #000000;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 45px;
+
+
+/* Rectangle 11 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 50px;
+height: 50px;
+left: 1167px;
+top: 66px;
+
+background: url(instagramlogo.png), #000000;
+border: 1px solid #000000;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 45px;
+
+
+/* Rectangle 12 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 50px;
+height: 50px;
+left: 1235px;
+top: 66px;
+
+background: url(listserv.png), #000000;
+border: 1px solid #000000;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 45px;
+
+
+/* Rectangle 11 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 50px;
+height: 48px;
+left: 1099px;
+top: 67px;
+
+background: url(youtubelogo.png), #000000;
+border: 1px solid #000000;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 45px;
+
+
+/* Resources Title Section */
+
+position: absolute;
+width: 1440px;
+height: 464px;
+left: -1px;
+top: 123px;
+
+
+
+/* Rectangle 31 */
+
+position: absolute;
+width: 1439px;
+height: 464px;
+left: 1px;
+top: 0px;
+
+background: #FFFFFF;
+
+
+/* Questions Blurb */
+
+position: absolute;
+width: 1440px;
+height: 300px;
+left: 0px;
+top: 124px;
+
+
+
+/* Questions Blurb */
+
+position: absolute;
+width: 1237px;
+height: 86px;
+left: 101px;
+top: 107px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 120%;
+/* or 38px */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* The Resources Page */
+
+position: absolute;
+width: 421px;
+height: 48px;
+left: 510px;
+top: 61px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 48px;
+line-height: 48px;
+/* identical to box height */
+display: flex;
+align-items: center;
+
+color: #000000;
+
+
+
+/* Contact Us Section */
+
+position: absolute;
+width: 1437px;
+height: 313px;
+left: -1px;
+top: 3387px;
+
+
+
+/* Rectangle 23 */
+
+position: absolute;
+width: 1437px;
+height: 274px;
+left: 0px;
+top: 0px;
+
+background: #FFFFFF;
+
+
+/* Questions about connecting?Let us know. */
+
+position: absolute;
+width: 1189px;
+height: 125px;
+left: 131px;
+top: 43px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 48px;
+line-height: 32px;
+/* or 67% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* Frame 2 */
+
+position: absolute;
+width: 227px;
+height: 72px;
+left: 625px;
+top: 168px;
+
+background: #FF7E7E;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 5px;
+
+
+/* Contact Us */
+
+position: absolute;
+width: 171px;
+height: 32px;
+left: 28px;
+top: 20px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 36px;
+line-height: 32px;
+/* identical to box height, or 89% */
+display: flex;
+align-items: center;
+
+color: #000000;
+
+
+
+/* Rectangle 33 */
+
+position: absolute;
+width: 351px;
+height: 520px;
+left: 100px;
+top: 1032px;
+
+background: #D9D9D9;
+
+
+/* Rectangle 34 */
+
+position: absolute;
+width: 351px;
+height: 520px;
+left: 544px;
+top: 1032px;
+
+background: #D9D9D9;
+
+
+/* Rectangle 35 */
+
+position: absolute;
+width: 351px;
+height: 520px;
+left: 988px;
+top: 1032px;
+
+background: #D9D9D9;
+
+
+/* Halal Eats */
+
+position: absolute;
+width: 305px;
+height: 71px;
+left: 116px;
+top: 1555px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 36px;
+line-height: 32px;
+/* or 89% */
+display: flex;
+align-items: center;
+
+color: #000000;
+
+
+
+/* Last updated: mm/dd/year Posted: mm/dd/year Author: Hamza Saeed */
+
+position: absolute;
+width: 305px;
+height: 65px;
+left: 116px;
+top: 1626px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 22px;
+/* or 110% */
+display: flex;
+align-items: center;
+
+color: #000000;
+
+
+
+/* Halal Eats */
+
+position: absolute;
+width: 305px;
+height: 71px;
+left: 1011px;
+top: 1552px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 36px;
+line-height: 32px;
+/* or 89% */
+display: flex;
+align-items: center;
+
+color: #000000;
+
+
+
+/* Last updated: mm/dd/year Posted: mm/dd/year Author: Hamza Saeed */
+
+position: absolute;
+width: 305px;
+height: 65px;
+left: 1011px;
+top: 1623px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 22px;
+/* or 110% */
+display: flex;
+align-items: center;
+
+color: #000000;
+
+
+
+/* Halal Eats */
+
+position: absolute;
+width: 305px;
+height: 71px;
+left: 567px;
+top: 1551px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 36px;
+line-height: 32px;
+/* or 89% */
+display: flex;
+align-items: center;
+
+color: #000000;
+
+
+
+/* Last updated: mm/dd/year Posted: mm/dd/year Author: Hamza Saeed */
+
+position: absolute;
+width: 305px;
+height: 65px;
+left: 567px;
+top: 1622px;
+
+font-family: 'JejuMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 22px;
+/* or 110% */
+display: flex;
+align-items: center;
+
+color: #000000;
+
