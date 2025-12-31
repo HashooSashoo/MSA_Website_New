@@ -122,8 +122,51 @@
                     </div>
 
                     <!-- Settings Icon -->
-                    <div class="prayer-settings-icon">
+                    <div class="prayer-settings-icon" id="prayerSettingsIcon">
                         <img src="image_files/settings.png" alt="Settings">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Prayer Times Settings Modal -->
+            <div class="prayer-settings-modal" id="prayerSettingsModal">
+                <div class="settings-modal-content">
+                    <div class="settings-modal-header">
+                        <h3>Prayer Times Settings</h3>
+                        <span class="close-modal" id="closeSettingsModal">&times;</span>
+                    </div>
+
+                    <div class="settings-modal-body">
+                        <div class="settings-group">
+                            <label for="calculationMethod">Calculation Method</label>
+                            <select id="calculationMethod">
+                                <option value="2" selected>ISNA (Islamic Society of North America)</option>
+                                <option value="3">MWL (Muslim World League)</option>
+                                <option value="1">University of Islamic Sciences, Karachi</option>
+                                <option value="4">Umm Al-Qura University, Makkah</option>
+                                <option value="5">Egyptian General Authority of Survey</option>
+                                <option value="10">Russia</option>
+                                <option value="13">Kuwait</option>
+                            </select>
+                        </div>
+
+                        <div class="settings-group">
+                            <label for="school">Madhab (School of Thought)</label>
+                            <select id="school">
+                                <option value="0" selected>Shafi</option>
+                                <option value="1">Hanafi</option>
+                            </select>
+                        </div>
+
+                        <div class="settings-group">
+                            <label for="prayerDate">Date</label>
+                            <input type="date" id="prayerDate">
+                        </div>
+                    </div>
+
+                    <div class="settings-modal-footer">
+                        <button class="btn-cancel" id="cancelSettings">Cancel</button>
+                        <button class="btn-save" id="saveSettings">Save Settings</button>
                     </div>
                 </div>
             </div>
@@ -192,5 +235,7 @@
     </footer>
 
     <script src="script-new.js"></script>
+    <script src="prayer-times-header.js"></script>
+    <script src="prayer-times.js"></script>
 </body>
 </html>
