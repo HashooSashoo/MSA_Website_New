@@ -55,7 +55,7 @@
                 </div>
 
                 <div class="prayer-item jummah-item">
-                    <span class="prayer-time">Jummah 1 PM / 2 PM</span>
+                    <span class="prayer-time">1:00 PM 2:00 PM</span>
                 </div>
             </div>
 
@@ -81,35 +81,52 @@
             <h1 class="section-title">Prayer Times</h1>
             <p class="section-description">Below are prayer times that we will use. They are standardized for Houston time for use by any Muslim in the Houston area. You can configure this using the WhatsApp button below.</p>
 
-            <div class="prayer-times-section">
-                <div class="prayer-table-container">
-                    <img src="image_files/mosque_4407132.png" alt="Mosque" class="mosque-icon">
+            <div class="prayer-times-display">
+                <div class="prayer-times-box">
+                    <!-- Mosque Icon -->
+                    <div class="prayer-mosque-icon">
+                        <img src="image_files/mosque_4407132.png" alt="Mosque">
+                    </div>
 
-                    <table class="prayer-table">
-                        <thead>
-                            <tr>
-                                <th>Fajr</th>
-                                <th>Dhuhr</th>
-                                <th>Asr</th>
-                                <th>Maghrib</th>
-                                <th>Isha</th>
-                                <th>Jummah</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>6:56 AM</td>
-                                <td>12:44 PM</td>
-                                <td>3:09 PM</td>
-                                <td>5:38 PM</td>
-                                <td>6:50 PM</td>
-                                <td>1 PM / 2 PM</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <!-- Prayer Names and Times -->
+                    <div class="prayer-names-times">
+                        <div class="prayer-column">
+                            <span class="prayer-name-large">Fajr</span>
+                            <span class="prayer-time-large">6<span class="colon">:</span>56 AM</span>
+                        </div>
+                        <div class="prayer-column">
+                            <span class="prayer-name-large">Dhuhr</span>
+                            <span class="prayer-time-large">12<span class="colon">:</span>44 PM</span>
+                        </div>
+                        <div class="prayer-column">
+                            <span class="prayer-name-large">Asr</span>
+                            <span class="prayer-time-large">3<span class="colon">:</span>09 PM</span>
+                        </div>
+                        <div class="prayer-column">
+                            <span class="prayer-name-large">Maghrib</span>
+                            <span class="prayer-time-large">5<span class="colon">:</span>38 PM</span>
+                        </div>
+                        <div class="prayer-column">
+                            <span class="prayer-name-large">Isha</span>
+                            <span class="prayer-time-large">6<span class="colon">:</span>50 PM</span>
+                        </div>
+                    </div>
 
-                    <img src="image_files/settings.png" alt="Settings" class="settings-icon">
+                    <!-- Divider -->
+                    <div class="prayer-divider-vertical"></div>
+
+                    <!-- Jummah Time -->
+                    <div class="prayer-jummah-column">
+                        <span class="prayer-name-large">Jummah</span>
+                        <span class="prayer-time-large">1<span class="colon">:</span>00 PM 2<span class="colon">:</span>00 PM</span>
+                    </div>
+
+                    <!-- Settings Icon -->
+                    <div class="prayer-settings-icon">
+                        <img src="image_files/settings.png" alt="Settings">
+                    </div>
                 </div>
+            </div>
 
                 <!-- Jummah Section -->
                 <div class="jummah-section">
@@ -127,9 +144,9 @@
                         </div>
                     </div>
 
-                    <div class="text-center">
-                        <p style="font-size: 18px; margin-bottom: 20px;">Need help regarding Jummah? Let us know.</p>
-                        <a href="contact.html" class="btn btn-contact">Contact Us</a>
+                    <div class="cta-section">
+                        <p class="cta-text">Need help regarding Jummah? Let us know.</p>
+                        <a href="contact.html" class="btn-contact">Contact Us</a>
                     </div>
                 </div>
 

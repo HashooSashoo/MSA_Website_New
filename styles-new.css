@@ -14,6 +14,14 @@
          url('fonts/JejuMyeongjo-Regular.ttf') format('truetype');
 }
 
+/* DS-DIGII - Digital Clock Font */
+@font-face {
+    font-family: 'DS-DIGII';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/DS-DIGII.TTF') format('truetype');
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap');
 
 /* ============================================
@@ -41,11 +49,34 @@
 
 /* Dark Mode Variables */
 [data-theme="dark"] {
-    --color-white: #1a1a1a;
+    --color-white: #0d1b2a;
     --color-black: #ffffff;
-    --color-quote-bg: #2a2a2a;
+    --color-quote-bg: #1b263b;
     --color-gray-text: #e0e0e0;
-    --color-gray-light: #3a3a3a;
+    --color-gray-light: #415a77;
+}
+
+/* Dark Mode - Invert mosque icons and settings icon */
+[data-theme="dark"] .mosque-icon img,
+[data-theme="dark"] .prayer-mosque-icon img,
+[data-theme="dark"] .prayer-settings-icon img {
+    filter: invert(1);
+}
+
+/* Dark Mode - Keep hero section unchanged */
+[data-theme="dark"] .hero-section {
+    background: #000000;
+}
+
+[data-theme="dark"] .hero-arabic,
+[data-theme="dark"] .hero-tagline {
+    color: #ffffff;
+}
+
+/* Dark Mode - Keep button text black */
+[data-theme="dark"] .btn-contact,
+[data-theme="dark"] .btn-donate {
+    color: #000000;
 }
 
 /* ============================================
@@ -63,18 +94,33 @@ body {
     color: var(--color-black);
     overflow-x: hidden;
     transition: var(--transition-theme);
+    padding-top: 95px;
+}
+
+/* Global Paragraph Styling */
+p {
+    max-width: 900px;
+    margin: 0 auto 40px;
+    font-family: var(--font-primary);
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    color: var(--color-black);
 }
 
 /* ============================================
    HEADER
    ============================================ */
 header {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 95px;
     background: var(--color-white);
     transition: var(--transition-theme);
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
 .header-container {
@@ -123,11 +169,11 @@ header {
 /* Prayer Times Widget in Header */
 .prayer-times-header {
     position: absolute;
-    width: 480px;
+    width: 500px;
     height: 50px;
     left: 50%;
-    transform: translateX(-50%);
-    top: 22px;
+    transform: translateX(-20%);
+    top: 20px;
     background: var(--color-white);
     border: 1px solid var(--color-black);
     border-radius: 25px;
@@ -137,7 +183,7 @@ header {
     padding: 0 15px;
     gap: 10px;
     cursor: pointer;
-    transition: opacity 0.3s;
+    transition: var(--transition-theme), opacity 0.3s;
 }
 
 .prayer-times-header:hover {
@@ -184,7 +230,7 @@ header {
 
 .prayer-item.jummah-item .prayer-time {
     font-family: var(--font-primary);
-    font-size: 13px;
+    font-size: 11px;
     line-height: 16px;
 }
 
@@ -326,7 +372,8 @@ header {
     line-height: 42px;
     text-align: center;
     color: var(--color-black);
-    margin-bottom: 40px;
+    margin-top: 50px;
+    margin-bottom: 30px;
 }
 
 /* Quote Box */
@@ -367,7 +414,7 @@ header {
 
 /* Section Description */
 .section-description {
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto 60px;
     font-family: var(--font-primary);
     font-size: 18px;
@@ -376,14 +423,11 @@ header {
     color: var(--color-black);
 }
 
-.section-description p {
-    margin-bottom: 20px;
-}
-
 /* CTA Section */
 .cta-section {
     text-align: center;
-    margin-top: 60px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -391,10 +435,676 @@ header {
 
 .cta-text {
     font-family: var(--font-primary);
-    font-size: 18px;
+    font-size: 30px;
     line-height: 26px;
     color: var(--color-black);
     margin-bottom: 20px;
+}
+
+/* ============================================
+   PRAYER TIMES PAGE - Large Display
+   ============================================ */
+.prayer-times-display {
+    width: 100%;
+    max-width: 1440px;
+    margin: 40px auto 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prayer-times-box {
+    position: relative;
+    width: 1001px;
+    height: 202px;
+    background: var(--color-white);
+    border: 1px solid var(--color-black);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    padding: 26px 32px;
+    /* box-shadow: 0px 4px 9px 3px rgba(0, 0, 0, 0.15); */
+}
+
+.prayer-mosque-icon {
+    width: 149px;
+    height: 149px;
+    flex-shrink: 0;
+}
+
+.prayer-mosque-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.prayer-names-times {
+    display: flex;
+    gap: 15px;
+    margin-left: 45px;
+    flex: 1;
+}
+
+.prayer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-width: 102px;
+}
+
+.prayer-name-large {
+    font-family: var(--font-primary);
+    font-size: 24px;
+    line-height: 32px;
+    color: var(--color-black);
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.prayer-time-large {
+    font-family: 'DS-DIGII', monospace;
+    font-size: 20px;
+    line-height: 32px;
+    color: var(--color-black);
+    text-align: center;
+}
+
+/* Blinking colon animation for clock times */
+@keyframes blink {
+    0%, 24% {
+        opacity: 1;
+    }
+    25%, 50% {
+        opacity: 0;
+    }
+}
+
+.prayer-time-large .colon {
+    animation: blink 2s step-start infinite;
+}
+
+.prayer-divider-vertical {
+    width: 1px;
+    height: 150px;
+    background: #000000;
+    border: 0px solid #000000;
+    margin: 0 30px;
+    flex-shrink: 0;
+}
+
+.prayer-jummah-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-width: 120px;
+}
+
+.prayer-settings-icon {
+    position: absolute;
+    width: 79px;
+    height: 79px;
+    right: -25px;
+    bottom: -50px;
+    background: var(--color-white);
+    border: 1px solid var(--color-black);
+    border-radius: 50%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.prayer-settings-icon:hover {
+    transform: scale(1.05);
+}
+
+.prayer-settings-icon img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+/* Jummah Section */
+.jummah-section {
+    max-width: 1200px;
+    margin: 60px auto;
+}
+
+.jummah-section h2 {
+    font-family: var(--font-primary);
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+    color: var(--color-black);
+    margin-bottom: 30px;
+}
+
+.jummah-info {
+    max-width: 900px;
+    margin: 0 auto 40px;
+    font-family: var(--font-primary);
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    color: var(--color-black);
+}
+
+.jummah-locations {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.location-box {
+    background: var(--color-quote-bg);
+    border-radius: 15px;
+    padding: 30px 40px;
+    font-family: var(--font-primary);
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    color: var(--color-black);
+    box-shadow: 0px 4px 9px 3px rgba(0, 0, 0, 0.15);
+    max-width: 400px;
+}
+
+@media (max-width: 1100px) {
+    .prayer-times-box {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .prayer-mosque-icon {
+        width: 100px;
+        height: 100px;
+    }
+
+    .prayer-names-times {
+        margin-left: 20px;
+        gap: 10px;
+    }
+
+    .prayer-column {
+        min-width: 80px;
+    }
+
+    .prayer-name-large {
+        font-size: 20px;
+    }
+
+    .prayer-time-large {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .prayer-times-box {
+        flex-direction: column;
+        height: auto;
+        padding: 30px 20px;
+    }
+
+    .prayer-mosque-icon {
+        margin-bottom: 20px;
+    }
+
+    .prayer-names-times {
+        margin-left: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .prayer-divider-vertical {
+        display: none;
+    }
+
+    .jummah-locations {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .location-box {
+        max-width: 90%;
+    }
+}
+
+/* ============================================
+   GOOGLE CALENDAR
+   ============================================ */
+.calendar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto 60px;
+    max-width: 100%;
+}
+
+.calendar-container iframe {
+    max-width: 100%;
+    box-shadow: 0px 4px 9px 3px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+}
+
+@media (max-width: 900px) {
+    .calendar-container iframe {
+        width: 100% !important;
+        height: 500px !important;
+    }
+}
+
+/* ============================================
+   CONTACT FORM
+   ============================================ */
+.contact-section {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+}
+
+.contact-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.form-container {
+    max-width: 1440px;
+    margin: 60px auto 40px;
+    padding: 26px 0;
+    background: var(--color-white);
+}
+
+.contact-section form {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* Form Row - Three inputs in a row */
+.form-row {
+    display: flex;
+    gap: 28px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 308px;
+}
+
+.form-group label {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    line-height: 16px;
+    color: #333333;
+    margin-bottom: 26px;
+}
+
+/* Dropdown / Select styling */
+.form-group select,
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    width: 100%;
+    height: 56px;
+    background: var(--color-white);
+    border: none;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-family: var(--font-primary);
+    font-size: 16px;
+    line-height: 16px;
+    color: #666666;
+    padding: 0 16px;
+    appearance: none;
+    transition: var(--transition-theme);
+}
+
+.form-group select {
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='7' viewBox='0 0 10 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%23000000' stroke-width='1.4' stroke-opacity='0.8'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 40px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    color: #333333;
+}
+
+.form-group input::placeholder {
+    color: #666666;
+}
+
+/* Textarea for message */
+.form-group textarea {
+    width: 100%;
+    min-height: 400px;
+    background: var(--color-white);
+    border: none;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-family: var(--font-primary);
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+    padding: 16px;
+    resize: vertical;
+    transition: var(--transition-theme);
+}
+
+.form-group textarea::placeholder {
+    color: #666666;
+}
+
+/* Full-width form group for textarea */
+.form-group:has(textarea) {
+    width: 100%;
+    max-width: 972px;
+    margin: 0 auto 40px;
+}
+
+.form-group:has(textarea) label {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Submit Button */
+.submit-btn {
+    display: block;
+    width: 122px;
+    height: 42px;
+    margin: 0 auto;
+    background: var(--color-contact-button);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    border: none;
+    font-family: var(--font-primary);
+    font-size: 16px;
+    line-height: 32px;
+    color: #000000;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.submit-btn:hover {
+    opacity: 0.8;
+}
+
+/* Dark mode adjustments for form */
+[data-theme="dark"] .form-group select,
+[data-theme="dark"] .form-group input[type="text"],
+[data-theme="dark"] .form-group input[type="email"],
+[data-theme="dark"] .form-group textarea {
+    background: var(--color-quote-bg);
+    color: var(--color-black);
+}
+
+[data-theme="dark"] .form-group select {
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='7' viewBox='0 0 10 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%23ffffff' stroke-width='1.4' stroke-opacity='0.8'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+}
+
+[data-theme="dark"] .form-group label {
+    color: var(--color-black);
+}
+
+@media (max-width: 1024px) {
+    .form-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-group {
+        width: 100%;
+        max-width: 500px;
+    }
+}
+
+/* ============================================
+   DONATIONS PAGE
+   ============================================ */
+.donations-section {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+}
+
+.donations-section .container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.donation-steps {
+    max-width: 1440px;
+    margin: 60px auto;
+}
+
+.donation-step {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    min-height: 513px;
+    margin: 0 auto 60px;
+    background: var(--color-white);
+    display: flex;
+    align-items: center;
+    padding: 66px 200px;
+    gap: 126px;
+}
+
+.step-image {
+    width: 383px;
+    height: 382px;
+    background: #D9D9D9;
+    border: 1px solid var(--color-black);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-theme);
+}
+
+.step-image .placeholder-text {
+    font-family: var(--font-primary);
+    font-size: 18px;
+    color: #666666;
+}
+
+.step-content {
+    flex: 1;
+    max-width: 624px;
+}
+
+.step-content h3 {
+    font-family: var(--font-primary);
+    font-size: 32px;
+    line-height: 32px;
+    color: var(--color-black);
+    margin-bottom: 40px;
+}
+
+.step-content p {
+    font-family: var(--font-primary);
+    font-size: 24px;
+    line-height: 32px;
+    color: var(--color-black);
+    margin-bottom: 16px;
+    text-align: left;
+    max-width: 100%;
+}
+
+.step-content p:last-of-type {
+    margin-bottom: 0;
+}
+
+.step-content a {
+    color: var(--color-black);
+    text-decoration: underline;
+}
+
+.step-content a:hover {
+    opacity: 0.7;
+}
+
+/* Dark mode for donation steps */
+[data-theme="dark"] .step-image {
+    background: #415a77;
+    border-color: var(--color-black);
+}
+
+@media (max-width: 1024px) {
+    .donation-step {
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 40px;
+        min-height: auto;
+    }
+
+    .step-image {
+        width: 100%;
+        max-width: 383px;
+        height: 300px;
+    }
+
+    .step-content {
+        max-width: 100%;
+    }
+
+    .step-content h3 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .step-content p {
+        font-size: 20px;
+        line-height: 28px;
+        text-align: center;
+    }
+}
+
+/* ============================================
+   RESOURCES PAGE
+   ============================================ */
+.resources-section {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+}
+
+.resources-section .container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* Resource Cards Container */
+.resource-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+/* Individual Resource Card */
+.resource-card {
+    width: 300px;
+    height: 550px;
+    background: var(--color-white);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.resource-card-image {
+    width: 100%;
+    height: 440px;
+    background: #D9D9D9;
+    border: 1px solid var(--color-black);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: var(--transition-theme);
+}
+
+.resource-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.resource-card-image .placeholder-text {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    color: #666666;
+}
+
+.resource-card-content {
+    padding: 15px 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.resource-card-title {
+    font-family: var(--font-primary);
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--color-black);
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.resource-card-description {
+    font-family: var(--font-primary);
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--color-black);
+    text-align: center;
+    max-width: 100%;
+    margin: 0;
+}
+
+/* Dark mode for resource cards */
+[data-theme="dark"] .resource-card-image {
+    background: #415a77;
+    border-color: var(--color-black);
+}
+
+@media (max-width: 1200px) {
+    .resource-cards {
+        padding: 0 20px;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .resource-card {
+        width: 100%;
+        max-width: 351px;
+        height: auto;
+    }
+
+    .resource-card-image {
+        width: 100%;
+        height: 400px;
+    }
 }
 
 /* ============================================
