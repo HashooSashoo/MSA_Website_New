@@ -1251,12 +1251,21 @@ header {
 [data-theme="dark"] .settings-group select,
 [data-theme="dark"] .settings-group input[type="date"] {
     background: #0d1b2a;
-    border-color: #2d4a5c;
-    color: var(--color-white);
+    border: 1px solid #2d4a5c;
+    color: #ffffff;
 }
 
 [data-theme="dark"] .settings-group select {
+    background-color: #0d1b2a;
     background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23ffffff' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    color: #ffffff;
+}
+
+[data-theme="dark"] .settings-group select option {
+    background-color: #0d1b2a;
+    color: #ffffff;
 }
 
 [data-theme="dark"] .btn-cancel {
