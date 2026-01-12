@@ -35,7 +35,7 @@
         const period = hour >= 12 ? 'PM' : 'AM';
         hour = hour % 12 || 12;
 
-        return `${hour}:${minute} ${period}`;
+        return `${hour}<span class="colon">:</span>${minute} ${period}`;
     }
 
     // Fetch prayer times from Aladhan API
@@ -89,7 +89,7 @@
                 if (prayerName && prayerTimeSpan) {
                     const name = prayerName.textContent;
                     if (prayers[name]) {
-                        prayerTimeSpan.textContent = convertTo12Hour(prayers[name]);
+                        prayerTimeSpan.innerHTML = convertTo12Hour(prayers[name]);
                     }
                 }
             }

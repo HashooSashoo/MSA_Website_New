@@ -217,6 +217,10 @@ header {
     color: var(--color-black);
 }
 
+.prayer-item .prayer-time .colon {
+    animation: blink 2s step-start infinite;
+}
+
 .prayer-divider {
     width: 1px;
     height: 45px;
