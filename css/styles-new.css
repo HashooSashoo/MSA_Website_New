@@ -9,9 +9,9 @@
     font-family: 'Jeju Myeongjo';
     font-style: normal;
     font-weight: 400;
-    src: url('fonts/JejuMyeongjo-Regular.woff2') format('woff2'),
-         url('fonts/JejuMyeongjo-Regular.woff') format('woff'),
-         url('fonts/JejuMyeongjo-Regular.ttf') format('truetype');
+    src: url('../fonts/JejuMyeongjo-Regular.woff2') format('woff2'),
+         url('../fonts/JejuMyeongjo-Regular.woff') format('woff'),
+         url('../fonts/JejuMyeongjo-Regular.ttf') format('truetype');
 }
 
 /* DS-DIGII - Digital Clock Font */
@@ -19,7 +19,7 @@
     font-family: 'DS-DIGII';
     font-style: normal;
     font-weight: 400;
-    src: url('fonts/DS-DIGII.TTF') format('truetype');
+    src: url('../fonts/DS-DIGII.TTF') format('truetype');
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap');

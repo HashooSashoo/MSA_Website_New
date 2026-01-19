@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 async function loadResources() {
     try {
-        const response = await fetch('resources-data.json');
+        const response = await fetch('../resources-data.json');
         const resources = await response.json();
 
         const resourceCardsContainer = document.getElementById('resourceCards');
