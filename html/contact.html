@@ -6,6 +6,7 @@
     <title>Contact Us - Rice Muslim Student Association</title>
     <link rel="stylesheet" href="../css/styles-new.css">
     <link rel="icon" href="../image_files/icons8-masjid-50.png" type="image/png">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
     <!-- Header -->
@@ -118,6 +119,9 @@
                         <label for="message">Please give a summary of your inquiry, with any relevant details and contact information if necessary.</label>
                         <textarea id="message" name="message" placeholder="" required></textarea>
                     </div>
+
+                    <div class="g-recaptcha" data-sitekey="6LfdbXUsAAAAAB-33-VKzzz70jn5IOGGOmG45L0E"></div>
+                    <p id="recaptchaError" style="color: red; font-size: 13px; margin: 6px 0 0; display: none;">Please complete the reCAPTCHA before submitting.</p>
 
                     <button type="submit" class="submit-btn">Submit Inquiry</button>
                 </form>

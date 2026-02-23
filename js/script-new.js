@@ -62,20 +62,22 @@ document.addEventListener('DOMContentLoaded', function() {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
 
-            // Get form data
-            const formData = {
-                topic: document.getElementById('topic').value,
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                message: document.getElementById('message').value
-            };
+            // Check reCAPTCHA
+            const recaptchaResponse = grecaptcha.getResponse();
+            const recaptchaError = document.getElementById('recaptchaError');
+            if (!recaptchaResponse) {
+                recaptchaError.style.display = 'block';
+                return;
+            }
+            recaptchaError.style.display = 'none';
 
             // Here you would typically send the data to a backend
             // For now, we'll just show an alert
             alert('Thank you for your inquiry! We will get back to you within 24-48 hours.\n\n(Note: Form submission backend not yet implemented)');
 
-            // Reset form
+            // Reset form and reCAPTCHA
             contactForm.reset();
+            grecaptcha.reset();
         });
     }
 
