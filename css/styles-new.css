@@ -1815,3 +1815,90 @@ footer {
     text-align: center;
     padding: 40px 0;
 }
+
+/* ============================================
+   ADMIN LOGIN
+   ============================================ */
+
+#adminOverlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: #000;
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+}
+
+#adminOverlay.active {
+    display: flex;
+}
+
+#adminLoginBox {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 280px;
+}
+
+#adminLoginBox input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #444;
+    color: #fff;
+    font-family: var(--font-primary);
+    font-size: 15px;
+    padding: 8px 2px;
+    outline: none;
+}
+
+#adminLoginBox input::placeholder {
+    color: #555;
+}
+
+#adminLoginBox input:focus {
+    border-bottom-color: #888;
+}
+
+#adminLoginBtn {
+    margin-top: 6px;
+    background: transparent;
+    border: 1px solid #444;
+    color: #fff;
+    font-family: var(--font-primary);
+    font-size: 14px;
+    padding: 10px;
+    cursor: pointer;
+    letter-spacing: 0.05em;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+#adminLoginBtn:hover {
+    border-color: #888;
+    color: #ccc;
+}
+
+#adminLoginError {
+    color: #c0392b;
+    font-family: var(--font-primary);
+    font-size: 13px;
+    text-align: center;
+    min-height: 18px;
+}
+
+#adminLabel {
+    display: none;
+    position: fixed;
+    bottom: 16px;
+    left: 20px;
+    font-family: var(--font-primary);
+    font-size: 12px;
+    color: #888;
+    z-index: 9000;
+    pointer-events: none;
+    letter-spacing: 0.05em;
+}
+
+#adminLabel.active {
+    display: block;
+}
