@@ -119,7 +119,10 @@ document.addEventListener('DOMContentLoaded', function() {
         <div id="adminOverlay">
             <div id="adminLoginBox">
                 <input type="text" id="adminUsername" placeholder="Username" autocomplete="off">
-                <input type="password" id="adminPassword" placeholder="Password" autocomplete="off">
+                <div id="adminPasswordWrapper">
+                    <input type="password" id="adminPassword" placeholder="Password" autocomplete="off">
+                    <button type="button" id="adminPasswordToggle" aria-label="Toggle password visibility">Show</button>
+                </div>
                 <div id="adminLoginError"></div>
                 <button id="adminLoginBtn">Login</button>
             </div>
@@ -187,6 +190,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Allow pressing Enter to submit
     document.getElementById('adminPassword').addEventListener('keydown', function (e) {
         if (e.key === 'Enter') adminLoginBtn.click();
+    });
+
+    // Toggle password visibility
+    document.getElementById('adminPasswordToggle').addEventListener('click', function () {
+        const pwInput = document.getElementById('adminPassword');
+        const isHidden = pwInput.type === 'password';
+        pwInput.type = isHidden ? 'text' : 'password';
+        this.textContent = isHidden ? 'Hide' : 'Show';
     });
 
     // Click admin label to log out

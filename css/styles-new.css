@@ -1841,6 +1841,40 @@ footer {
     width: 280px;
 }
 
+#adminPasswordWrapper {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #444;
+    gap: 8px;
+}
+
+#adminPasswordWrapper:focus-within {
+    border-bottom-color: #888;
+}
+
+#adminPasswordWrapper #adminPassword {
+    border-bottom: none;
+    flex: 1;
+    padding: 8px 2px;
+}
+
+#adminPasswordToggle {
+    background: transparent;
+    border: none;
+    color: #555;
+    font-family: var(--font-primary);
+    font-size: 12px;
+    cursor: pointer;
+    padding: 4px 2px;
+    letter-spacing: 0.05em;
+    flex-shrink: 0;
+    transition: color 0.2s;
+}
+
+#adminPasswordToggle:hover {
+    color: #aaa;
+}
+
 #adminLoginBox input {
     background: transparent;
     border: none;
