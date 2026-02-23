@@ -619,7 +619,7 @@ header {
 
 .jummah-locations {
     display: flex;
-    gap: 30px;
+    gap: 42px;
     justify-content: center;
     margin-bottom: 60px;
 }
@@ -629,12 +629,134 @@ header {
     border-radius: 15px;
     padding: 30px 40px;
     font-family: var(--font-primary);
-    font-size: 18px;
-    line-height: 26px;
     text-align: center;
     color: var(--color-black);
     box-shadow: 0px 4px 9px 3px rgba(0, 0, 0, 0.15);
-    max-width: 400px;
+    width: 432px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.location-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 8px 18px 4px rgba(0, 0, 0, 0.2);
+}
+
+.location-name {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 26px;
+    margin: 0;
+}
+
+.location-sublabel {
+    font-size: 14px;
+    line-height: 20px;
+    opacity: 0.7;
+    margin: 0;
+}
+
+.location-img-placeholder {
+    width: 100%;
+    height: 150px;
+    background: #d0d0d0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Location Modal */
+.location-modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.location-modal-overlay.active {
+    display: flex;
+}
+
+.location-modal {
+    background: var(--color-quote-bg);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 560px;
+    width: 90%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.location-modal-close {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--color-black);
+    line-height: 1;
+}
+
+.location-modal-name {
+    font-family: var(--font-primary);
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-black);
+    margin: 0;
+    text-align: center;
+}
+
+.location-modal-sublabel {
+    font-family: var(--font-primary);
+    font-size: 15px;
+    color: var(--color-black);
+    opacity: 0.7;
+    margin: 0;
+    text-align: center;
+}
+
+.location-modal-img-placeholder {
+    width: 100%;
+    height: 200px;
+    background: #d0d0d0;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 14px;
+    font-family: var(--font-primary);
+}
+
+.location-modal-map {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.location-modal-map iframe {
+    width: 100%;
+    height: 250px;
+    border: none;
+    display: block;
 }
 
 @media (max-width: 1100px) {

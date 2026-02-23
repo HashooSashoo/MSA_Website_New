@@ -181,13 +181,54 @@
                     </div>
 
                     <div class="jummah-locations">
-                        <div class="location-box">
-                            Kyle Morrow Room - Fondren Library 3rd Floor
+                        <div class="location-box" onclick="openLocationModal('Kyle Morrow Room', 'Fondren Library 3rd Floor', 'www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6930.1131186517905!2d-95.4026693240155!3d29.718120875089554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c064b7f18e1f%3A0x92295a081617a3fc!2sFondren%20Library!5e0!3m2!1sen!2sus!4v1771864022690!5m2!1sen!2sus')">
+                            <p class="location-name">Kyle Morrow Room</p>
+                            <p class="location-sublabel">Fondren Library 3rd Floor</p>
+                            <div class="location-img-placeholder">
+                                <span>Image coming soon</span>
+                            </div>
                         </div>
-                        <div class="location-box">
-                            Duncan PDR - Second Floor of West Servery
+                        <div class="location-box" onclick="openLocationModal('Duncan PDR', 'Second Floor of West Servery', 'www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3464.9551055581933!2d-95.40104412401536!3d29.72105967508807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c07ebd5cc87f%3A0x7c1907be086dd71f!2sWest%20Servery!5e0!3m2!1sen!2sus!4v1771863918424!5m2!1sen!2sus')">
+                            <p class="location-name">Duncan PDR</p>
+                            <p class="location-sublabel">Second Floor of West Servery</p>
+                            <div class="location-img-placeholder">
+                                <span>Image coming soon</span>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Location Modal -->
+                    <div class="location-modal-overlay" id="locationModalOverlay">
+                        <div class="location-modal">
+                            <button class="location-modal-close" onclick="closeLocationModal()">&times;</button>
+                            <h2 class="location-modal-name" id="locationModalName"></h2>
+                            <p class="location-modal-sublabel" id="locationModalSublabel"></p>
+                            <div class="location-modal-img-placeholder">
+                                <span>Image coming soon</span>
+                            </div>
+                            <div class="location-modal-map">
+                                <iframe id="locationModalMap" src="" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- General Prayer Room Section -->
+                <div class="jummah-section">
+                    <h2>General Prayer Room</h2>
+                    <div class="jummah-info">
+                        <p>Additionally, we have a general prayer room on campus for people to pray jama'ah together at anytime in the day.</p>
+                    </div>
+
+                    <div class="jummah-locations">
+                        <div class="location-box" onclick="openLocationModal('Prayer Room', 'Next to Rice Memorial Chapel', 'www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d711.3679351260807!2d-95.4021249340274!3d29.7179474103409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c07b98656281%3A0x326ad2286364ce78!2sRice%20Memorial%20Chapel!5e0!3m2!1sen!2sus!4v1771864413722!5m2!1sen!2sus')">
+                            <p class="location-name">Prayer Room</p>
+                            <p class="location-sublabel">Next to Rice Memorial Chapel</p>
+                            <div class="location-img-placeholder">
+                                <span>Image coming soon</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                     <div class="cta-section">
                         <p class="cta-text">Need help regarding Jummah? Let us know.</p>
@@ -195,9 +236,11 @@
                     </div>
                 </div>
 
+
                 <div class="quote-box">
                     <p class="arabic">يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوٓا۟ إِذَا نُودِىَ لِلصَّلَوٰةِ مِن يَوْمِ ٱلْجُمُعَةِ فَٱسْعَوْا۟ إِلَىٰ ذِكْرِ ٱللَّهِ وَذَرُوا۟ ٱلْبَيْعَ ۚ ذَٰلِكُمْ خَيْرٌۭ لَّكُمْ إِن كُنتُمْ تَعْلَمُونَ</p>
-                    <p class="translation">*Believers! When the call is made for Prayer on Friday, hasten to the remembrance of Allah and give up all trading. That is better for you if you only knew. And when the prayer is ended, disperse in the land and seek God's bounty, and remember God much, that you may prosper. And when they see merchandise or diversion they scatter off to it and leave you standing. Say, 'What is with God is better than diversion and merchandise, and God is the best of providers'* [Al-Jumu'ah 62:9-11]</p>
+                    <p class="reference">[Surah Al-Jumu'ah 62:9]</p>
+                    <p class="translation">Believers! When the call is made for Prayer on Friday, hasten to the remembrance of Allah and give up all trading. That is better for you if you only knew.</p>
                 </div>
             </div>
         </div>

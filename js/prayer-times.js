@@ -234,3 +234,32 @@ document.addEventListener('DOMContentLoaded', function() {
 
     console.log('Prayer times module initialized');
 });
+
+// ============================================
+// LOCATION MODAL
+// ============================================
+
+function openLocationModal(name, sublabel, mapEmbedUrl) {
+    const overlay = document.getElementById('locationModalOverlay');
+    document.getElementById('locationModalName').textContent = name;
+    document.getElementById('locationModalSublabel').textContent = sublabel;
+
+    if (mapEmbedUrl) {
+        // Use the provided embed URL, ensuring it has https://
+        const src = mapEmbedUrl.startsWith('http') ? mapEmbedUrl : 'https://' + mapEmbedUrl;
+        document.getElementById('locationModalMap').src = src;
+    } else {
+        // Fallback: auto-generate from location name
+        const query = encodeURIComponent(name + ' ' + sublabel + ' Rice University Houston TX');
+        document.getElementById('locationModalMap').src =
+            'https://maps.google.com/maps?q=' + query + '&output=embed';
+    }
+
+    overlay.classList.add('active');
+}
+
+function closeLocationModal() {
+    const overlay = document.getElementById('locationModalOverlay');
+    overlay.classList.remove('active');
+    document.getElementById('locationModalMap').src = '';
+}
