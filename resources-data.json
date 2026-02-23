@@ -2,19 +2,28 @@
     {
         "id": 1,
         "title": "Halal Eats",
-        "description": "Late updated: (insert-date)\nAuthor: (name here)\nContact: (email here)",
-        "imagePlaceholder": true
+        "author": "(name here)",
+        "date": "(insert-date)",
+        "description": "A guide to finding halal food on and around Rice University's campus.",
+        "imagePlaceholder": true,
+        "contentFile": "../articles/halal-eats/halal-eats.md"
     },
     {
         "id": 2,
         "title": "Halal Eats",
-        "description": "Late updated: (insert-date)\nAuthor: (name here)\nContact: (email here)",
-        "imagePlaceholder": true
+        "author": "(name here)",
+        "date": "(insert-date)",
+        "description": "A guide to finding halal food on and around Rice University's campus.",
+        "imagePlaceholder": true,
+        "contentFile": "../articles/halal-eats-2/halal-eats-2.md"
     },
     {
         "id": 3,
         "title": "Halal Eats",
-        "description": "Late updated: (insert-date)\nAuthor: (name here)\nContact: (email here)",
-        "imagePlaceholder": true
+        "author": "(name here)",
+        "date": "(insert-date)",
+        "description": "A guide to finding halal food on and around Rice University's campus.",
+        "imagePlaceholder": true,
+        "contentFile": "../articles/halal-eats-3/halal-eats-3.md"
     }
 ]

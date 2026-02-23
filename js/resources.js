@@ -29,11 +29,12 @@ async function loadResources() {
 }
 
 function createResourceCard(resource) {
-    const card = document.createElement('div');
+    const card = document.createElement('a');
     card.className = 'resource-card';
+    card.href = 'article.html?id=' + resource.id;
 
     const imageDiv = document.createElement('div');
-    imageDiv.className = 'resource-image';
+    imageDiv.className = 'resource-card-image';
 
     if (resource.imagePlaceholder) {
         imageDiv.innerHTML = '<span class="placeholder-text">Image Placeholder</span>';
@@ -45,16 +46,18 @@ function createResourceCard(resource) {
     }
 
     const contentDiv = document.createElement('div');
-    contentDiv.className = 'resource-content';
+    contentDiv.className = 'resource-card-content';
 
     const title = document.createElement('h3');
+    title.className = 'resource-card-title';
     title.textContent = resource.title;
 
-    const description = document.createElement('p');
-    description.textContent = resource.description;
+    const meta = document.createElement('p');
+    meta.className = 'resource-card-description';
+    meta.innerHTML = 'Last updated: ' + resource.date + '<br>Author: ' + resource.author;
 
     contentDiv.appendChild(title);
-    contentDiv.appendChild(description);
+    contentDiv.appendChild(meta);
 
     card.appendChild(imageDiv);
     card.appendChild(contentDiv);

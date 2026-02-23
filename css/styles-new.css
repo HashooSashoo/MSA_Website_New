@@ -1168,6 +1168,8 @@ header {
     transition: transform 0.3s, box-shadow 0.3s;
     display: flex;
     flex-direction: column;
+    text-decoration: none;
+    color: inherit;
 }
 
 .resource-card:hover {
@@ -1693,4 +1695,123 @@ footer {
     .prayer-item .prayer-time {
         font-size: 11px;
     }
+}
+
+/* ============================================
+   ARTICLE PAGE
+   ============================================ */
+
+.article-section {
+    padding: 60px 20px;
+}
+
+.article-section .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.article-back-link {
+    display: inline-block;
+    font-family: var(--font-primary);
+    font-size: 15px;
+    color: var(--color-green);
+    text-decoration: none;
+    margin-bottom: 40px;
+}
+
+.article-back-link:hover {
+    text-decoration: underline;
+}
+
+.article-header {
+    margin-bottom: 30px;
+}
+
+.article-title {
+    font-family: var(--font-primary);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--color-black);
+    margin: 0 0 16px;
+}
+
+.article-meta {
+    display: flex;
+    gap: 20px;
+    font-family: var(--font-primary);
+    font-size: 15px;
+    color: var(--color-black);
+    opacity: 0.65;
+    border-top: 1px solid rgba(0,0,0,0.12);
+    padding-top: 16px;
+}
+
+.article-img-placeholder {
+    width: 100%;
+    height: 280px;
+    background: #d0d0d0;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-family: var(--font-primary);
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+
+.article-img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    display: block;
+}
+
+.article-body {
+    font-family: var(--font-primary);
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--color-black);
+}
+
+.article-body h1,
+.article-body h2,
+.article-body h3 {
+    font-family: var(--font-primary);
+    color: var(--color-black);
+    margin-top: 40px;
+    margin-bottom: 12px;
+}
+
+.article-body h1 { font-size: 30px; }
+.article-body h2 { font-size: 24px; }
+.article-body h3 { font-size: 20px; }
+
+.article-body p {
+    margin-bottom: 20px;
+}
+
+.article-body ul,
+.article-body ol {
+    padding-left: 24px;
+    margin-bottom: 20px;
+}
+
+.article-body li {
+    margin-bottom: 8px;
+}
+
+.article-body a {
+    color: var(--color-green);
+}
+
+.article-loading,
+.article-error {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    color: var(--color-black);
+    opacity: 0.6;
+    text-align: center;
+    padding: 40px 0;
 }
