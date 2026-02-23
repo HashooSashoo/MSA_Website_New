@@ -31,7 +31,7 @@ async function loadResources() {
 function createResourceCard(resource) {
     const card = document.createElement('a');
     card.className = 'resource-card';
-    card.href = 'article.html?id=' + resource.id;
+    card.href = resource.url;
 
     const imageDiv = document.createElement('div');
     imageDiv.className = 'resource-card-image';

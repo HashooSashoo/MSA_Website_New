@@ -62,22 +62,11 @@ document.addEventListener('DOMContentLoaded', function() {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
 
-            // Check reCAPTCHA
-            const recaptchaResponse = grecaptcha.getResponse();
-            const recaptchaError = document.getElementById('recaptchaError');
-            if (!recaptchaResponse) {
-                recaptchaError.style.display = 'block';
-                return;
-            }
-            recaptchaError.style.display = 'none';
-
             // Here you would typically send the data to a backend
             // For now, we'll just show an alert
             alert('Thank you for your inquiry! We will get back to you within 24-48 hours.\n\n(Note: Form submission backend not yet implemented)');
 
-            // Reset form and reCAPTCHA
             contactForm.reset();
-            grecaptcha.reset();
         });
     }
 
@@ -198,5 +187,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Allow pressing Enter to submit
     document.getElementById('adminPassword').addEventListener('keydown', function (e) {
         if (e.key === 'Enter') adminLoginBtn.click();
+    });
+
+    // Click admin label to log out
+    adminLabel.addEventListener('click', function () {
+        sessionStorage.removeItem('msaAdmin');
+        adminLabel.classList.remove('active');
     });
 });

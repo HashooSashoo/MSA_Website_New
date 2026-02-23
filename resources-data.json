@@ -6,7 +6,7 @@
         "date": "(insert-date)",
         "description": "A guide to finding halal food on and around Rice University's campus.",
         "imagePlaceholder": true,
-        "contentFile": "../articles/halal-eats/halal-eats.md"
+        "url": "../articles/halal-eats/index.html"
     },
     {
         "id": 2,
@@ -15,7 +15,7 @@
         "date": "(insert-date)",
         "description": "A guide to finding halal food on and around Rice University's campus.",
         "imagePlaceholder": true,
-        "contentFile": "../articles/halal-eats-2/halal-eats-2.md"
+        "url": "../articles/halal-eats-2/index.html"
     },
     {
         "id": 3,
@@ -24,6 +24,6 @@
         "date": "(insert-date)",
         "description": "A guide to finding halal food on and around Rice University's campus.",
         "imagePlaceholder": true,
-        "contentFile": "../articles/halal-eats-3/halal-eats-3.md"
+        "url": "../articles/halal-eats-3/index.html"
     }
 ]
