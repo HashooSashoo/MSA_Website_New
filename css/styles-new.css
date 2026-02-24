@@ -2024,11 +2024,6 @@ footer {
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: transform 0.5s ease;
-}
-
-.halal-meal-image:hover img {
-    transform: scale(1.03);
 }
 
 /* Section separator */

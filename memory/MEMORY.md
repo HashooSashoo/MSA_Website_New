@@ -54,6 +54,7 @@ These classes are reusable for future articles — just copy the HTML structure.
 - Cards live in `.resource-cards` > `.resource-card` (anchor tags)
 - Card image: `.resource-card-image` > `<img>` (440px tall)
 - Card text: `.resource-card-content` > `.resource-card-title` + `.resource-card-description`
+- `.resource-card-description` format: `Last Updated: [date]<br>By [Author]`
 - Card 1 links to `../articles/halal-eats/halaleats.html`
 - Cards 2 and 3 are placeholder
 
