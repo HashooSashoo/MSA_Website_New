@@ -38,6 +38,9 @@
     --color-gray-light: #D9D9D9;
     --color-gray-text: #333333;
     --color-dark-mode-bg: #262626;
+    --color-green: #2d5a27;
+    --color-green-light: #4a7c42;
+    --color-gold: #c9a84c;
 
     /* Fonts */
     --font-primary: 'Jeju Myeongjo', serif;
@@ -1814,6 +1817,303 @@ footer {
     opacity: 0.6;
     text-align: center;
     padding: 40px 0;
+}
+
+/* ============================================
+   HALAL EATS ARTICLE
+   ============================================ */
+
+/* Hero banner */
+.halal-article-hero {
+    background: var(--color-green);
+    padding: 60px 40px 50px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.halal-article-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 30px,
+        rgba(255,255,255,0.02) 30px,
+        rgba(255,255,255,0.02) 31px
+    );
+    pointer-events: none;
+}
+
+.halal-article-byline-tag {
+    display: inline-block;
+    font-family: var(--font-primary);
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--color-gold);
+    margin-bottom: 20px;
+    border: 1px solid var(--color-gold);
+    padding: 6px 14px;
+    border-radius: 2px;
+}
+
+.halal-article-hero-title {
+    font-family: var(--font-primary);
+    font-size: clamp(1.8rem, 5vw, 3.2rem);
+    color: #fff;
+    line-height: 1.2;
+    max-width: 750px;
+    margin: 0 auto 14px;
+    font-weight: 400;
+}
+
+.halal-article-hero-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: var(--font-primary);
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: rgba(255,255,255,0.55);
+}
+
+.halal-article-hero-meta .halal-meta-author {
+    color: rgba(255,255,255,0.8);
+}
+
+.halal-article-hero-meta .halal-meta-dates {
+    font-size: 11px;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 0.5px;
+    margin-top: 6px;
+}
+
+.halal-article-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: 200px;
+    margin: 28px auto 0;
+}
+
+.halal-article-divider span {
+    flex: 1;
+    height: 1px;
+    background: var(--color-gold);
+    opacity: 0.5;
+}
+
+.halal-article-dot {
+    width: 5px;
+    height: 5px;
+    background: var(--color-gold);
+    border-radius: 50%;
+    opacity: 0.8;
+}
+
+/* Article section wrapper */
+.halal-article-section {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 50px 30px 0;
+}
+
+/* Intro block */
+.halal-intro {
+    max-width: 720px;
+    margin: 0 auto 70px;
+    text-align: center;
+}
+
+.halal-salam {
+    font-family: var(--font-primary);
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--color-green-light);
+    margin-bottom: 18px;
+}
+
+.halal-intro p {
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    color: var(--color-gray-text);
+    line-height: 1.9;
+}
+
+/* Meal sections */
+.halal-meal-section {
+    margin-bottom: 70px;
+    opacity: 0;
+    transform: translateY(24px);
+    animation: halalFadeUp 0.7s ease forwards;
+}
+
+.halal-meal-section:nth-child(3)  { animation-delay: 0.1s; }
+.halal-meal-section:nth-child(5)  { animation-delay: 0.2s; }
+.halal-meal-section:nth-child(7)  { animation-delay: 0.3s; }
+.halal-meal-section:nth-child(9)  { animation-delay: 0.4s; }
+
+@keyframes halalFadeUp {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.halal-meal-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+.halal-meal-number {
+    font-family: var(--font-primary);
+    font-size: 3rem;
+    color: var(--color-green);
+    opacity: 0.15;
+    line-height: 1;
+    font-weight: 400;
+    min-width: 50px;
+}
+
+.halal-meal-title-block h2 {
+    font-family: var(--font-primary);
+    font-size: 1.7rem;
+    color: var(--color-green);
+    font-weight: 400;
+}
+
+.halal-meal-line {
+    height: 2px;
+    background: linear-gradient(90deg, var(--color-gold), transparent);
+    margin-top: 6px;
+    width: 80px;
+}
+
+.halal-meal-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.halal-meal-content-reverse {
+    direction: rtl;
+}
+
+.halal-meal-content-reverse > * {
+    direction: ltr;
+}
+
+.halal-meal-text p {
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    color: var(--color-gray-text);
+    line-height: 1.85;
+}
+
+.halal-meal-image {
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+    aspect-ratio: 4 / 4.3;
+}
+
+.halal-meal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.halal-meal-image:hover img {
+    transform: scale(1.03);
+}
+
+/* Section separator */
+.halal-section-sep {
+    margin-bottom: 70px;
+}
+
+.halal-section-sep hr {
+    border: none;
+    border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+/* Closing block */
+.halal-closing {
+    background: var(--color-quote-bg);
+    box-shadow: 0px 4px 9px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+    padding: 50px 60px;
+    text-align: center;
+    margin: 0 0 80px;
+    transition: var(--transition-theme);
+}
+
+.halal-closing p {
+    max-width: 620px;
+    margin: 0 auto 20px;
+    font-family: var(--font-primary);
+    color: var(--color-gray-text);
+    font-size: 1rem;
+    line-height: 1.9;
+}
+
+.halal-sign-off {
+    font-family: var(--font-primary);
+    font-style: italic;
+    color: var(--color-green);
+    font-size: 1.1rem;
+    margin-top: 28px;
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .halal-meal-text p,
+[data-theme="dark"] .halal-intro p,
+[data-theme="dark"] .halal-closing p {
+    color: var(--color-gray-text);
+}
+
+[data-theme="dark"] .halal-section-sep hr {
+    border-top-color: rgba(255,255,255,0.1);
+}
+
+[data-theme="dark"] .halal-meal-number {
+    color: #8bc48a;
+}
+
+[data-theme="dark"] .halal-meal-title-block h2 {
+    color: #8bc48a;
+}
+
+[data-theme="dark"] .halal-sign-off {
+    color: #8bc48a;
+}
+
+[data-theme="dark"] .halal-salam {
+    color: #8bc48a;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .halal-meal-content,
+    .halal-meal-content-reverse {
+        grid-template-columns: 1fr;
+        direction: ltr;
+    }
+    .halal-meal-image {
+        aspect-ratio: 4 / 3;
+    }
+    .halal-article-hero {
+        padding: 40px 20px 36px;
+    }
+    .halal-closing {
+        padding: 40px 24px;
+        border-radius: 20px;
+        margin-bottom: 60px;
+    }
 }
 
 /* ============================================
