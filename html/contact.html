@@ -97,10 +97,10 @@
                             <select id="topic" name="topic" required>
                                 <option value="" disabled selected>Select Topic</option>
                                 <option value="general">General Question</option>
-                                <option value="events">Events</option>
-                                <option value="prayer">Prayer Times</option>
+                                <option value="events">Recent Concerns</option>
+                                <option value="collabs">Collaboration Inquiry</option>
                                 <option value="donations">Donations</option>
-                                <option value="resources">Resources</option>
+                                <option value="resources">Requests and Resources</option>
                                 <option value="other">Other</option>
                             </select>
                         </div>
@@ -119,7 +119,11 @@
                         <textarea id="message" name="message" placeholder="" required></textarea>
                     </div>
 
-                    <button type="submit" class="submit-btn">Submit Inquiry</button>
+                    <div class="recaptcha-wrapper">
+                        <div class="h-captcha" data-sitekey="3bf24a98-e76e-43e2-86ea-8656d27e1452"></div>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="submitBtn">Submit Inquiry</button>
                 </form>
             </div>
         </div>
@@ -158,7 +162,10 @@
         </div>
     </footer>
 
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="../js/script-new.js"></script>
     <script src="../js/prayer-times-header.js"></script>
+    <script src="../js/contact.js"></script>
 </body>
 </html>
