@@ -170,15 +170,20 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     adminLoginBtn.addEventListener('click', async function () {
+        const username = document.getElementById('adminUsername').value;
         const password = document.getElementById('adminPassword').value;
         const hash = await hashPassword(password);
         if (hash === ADMIN_HASH) {
-            sessionStorage.setItem('msaAdmin', 'true');
             adminOverlay.classList.remove('active');
-            adminLabel.classList.add('active');
             adminLoginError.textContent = '';
             document.getElementById('adminPassword').value = '';
             document.getElementById('adminUsername').value = '';
+            if (username.trim().toLowerCase() === 'zakariya') {
+                if (typeof activateFrutigerAero === 'function') activateFrutigerAero();
+            } else {
+                sessionStorage.setItem('msaAdmin', 'true');
+                adminLabel.classList.add('active');
+            }
         } else {
             adminLoginError.textContent = 'Incorrect password.';
             document.getElementById('adminPassword').value = '';
