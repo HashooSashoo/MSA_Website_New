@@ -172,9 +172,21 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Login button handler
-    adminLoginBtn.addEventListener('click', function () {
+    const ADMIN_HASH = '8b0b97932c748a27cad9c45084fc1a1a692e8e33229d74319edeea91cb2e85b6';
+
+    async function hashPassword(password) {
+        const encoder = new TextEncoder();
+        const data = encoder.encode(password);
+        const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+        return Array.from(new Uint8Array(hashBuffer))
+            .map(b => b.toString(16).padStart(2, '0'))
+            .join('');
+    }
+
+    adminLoginBtn.addEventListener('click', async function () {
         const password = document.getElementById('adminPassword').value;
-        if (password === 'R!CEM$A_JMZ') {
+        const hash = await hashPassword(password);
+        if (hash === ADMIN_HASH) {
             sessionStorage.setItem('msaAdmin', 'true');
             adminOverlay.classList.remove('active');
             adminLabel.classList.add('active');
