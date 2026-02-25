@@ -55,20 +55,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // ============================================
-    // CONTACT FORM HANDLING
-    // ============================================
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            // Here you would typically send the data to a backend
-            // For now, we'll just show an alert
-            alert('Thank you for your inquiry! We will get back to you within 24-48 hours.\n\n(Note: Form submission backend not yet implemented)');
-
-            contactForm.reset();
-        });
-    }
 
     // ============================================
     // SMOOTH SCROLLING FOR ANCHOR LINKS
