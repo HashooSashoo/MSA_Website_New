@@ -82,6 +82,23 @@
     color: #000000;
 }
 
+/* Dark Mode - Prayer divider vertical bar */
+[data-theme="dark"] .prayer-divider-vertical {
+    background: #ffffff;
+    border-color: #ffffff;
+}
+
+/* Dark Mode - Keep footer text and icons black */
+[data-theme="dark"] .footer-text,
+[data-theme="dark"] .footer-sitemap {
+    color: #000000;
+}
+
+[data-theme="dark"] .social-icon {
+    background: #000000;
+    border-color: #000000;
+}
+
 /* ============================================
    GLOBAL RESET & BASE STYLES
    ============================================ */
@@ -1429,6 +1446,7 @@ header {
     background: #0d1b2a;
     border: 1px solid #2d4a5c;
     color: #ffffff;
+    color-scheme: light;
 }
 
 [data-theme="dark"] .settings-group select {

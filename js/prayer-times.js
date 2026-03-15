@@ -141,6 +141,26 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // ============================================
+    // DAYLIGHT SAVINGS DETECTION
+    // ============================================
+
+    // Returns true if Houston is currently observing CDT (UTC-5), false if CST (UTC-6)
+    function isHoustonDST() {
+        const now = new Date();
+        const januaryOffset = new Date(now.getFullYear(), 0, 1).getTimezoneOffset();
+        const julyOffset = new Date(now.getFullYear(), 6, 1).getTimezoneOffset();
+        const stdOffset = Math.max(januaryOffset, julyOffset);
+        return now.getTimezoneOffset() < stdOffset;
+    }
+
+    // Returns the two Jummah times based on DST
+    function getJummahTimes() {
+        return isHoustonDST()
+            ? { first: '2:00 PM', second: '3:00 PM' }
+            : { first: '1:00 PM', second: '2:00 PM' };
+    }
+
+    // ============================================
     // UPDATE UI WITH PRAYER TIMES
     // ============================================
 
@@ -168,9 +188,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Update header widget
         const headerPrayerItems = document.querySelectorAll('.prayer-times-header .prayer-item');
-        let prayerIndex = 0;
 
-        headerPrayerItems.forEach((item, index) => {
+        headerPrayerItems.forEach((item) => {
             if (!item.classList.contains('jummah-item')) {
                 const prayerName = item.querySelector('.prayer-name').textContent;
                 const prayerTimeSpan = item.querySelector('.prayer-time');
@@ -191,11 +210,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (prayers[prayerName]) {
                 const { hour, minute, period } = convertTo12Hour(prayers[prayerName]);
-
-                // Update with blinking colon
                 prayerTimeSpan.innerHTML = `${hour}<span class="colon">:</span>${minute} ${period}`;
             }
         });
+
+        // Update Jummah times based on DST
+        const jummah = getJummahTimes();
+
+        // Header widget — two .prayer-time spans inside .jummah-item
+        const jummahItem = document.querySelector('.prayer-times-header .jummah-item');
+        if (jummahItem) {
+            const spans = jummahItem.querySelectorAll('.prayer-time');
+            if (spans[0]) spans[0].innerHTML = jummah.first.replace(':', '<span class="colon">:</span>');
+            if (spans[1]) spans[1].innerHTML = jummah.second.replace(':', '<span class="colon">:</span>');
+        }
+
+        // Main prayer box — single .prayer-time-large in .prayer-jummah-column
+        const jummahColumn = document.querySelector('.prayer-jummah-column .prayer-time-large');
+        if (jummahColumn) {
+            const f = jummah.first.replace(':', '<span class="colon">:</span>');
+            const s = jummah.second.replace(':', '<span class="colon">:</span>');
+            jummahColumn.innerHTML = `${f} &nbsp; ${s}`;
+        }
     }
 
     // ============================================
@@ -245,11 +281,9 @@ function openLocationModal(name, sublabel, mapEmbedUrl) {
     document.getElementById('locationModalSublabel').textContent = sublabel;
 
     if (mapEmbedUrl) {
-        // Use the provided embed URL, ensuring it has https://
         const src = mapEmbedUrl.startsWith('http') ? mapEmbedUrl : 'https://' + mapEmbedUrl;
         document.getElementById('locationModalMap').src = src;
     } else {
-        // Fallback: auto-generate from location name
         const query = encodeURIComponent(name + ' ' + sublabel + ' Rice University Houston TX');
         document.getElementById('locationModalMap').src =
             'https://maps.google.com/maps?q=' + query + '&output=embed';

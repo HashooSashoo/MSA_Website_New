@@ -68,6 +68,21 @@
         }
     }
 
+    // Returns true if Houston is currently observing CDT (DST active)
+    function isHoustonDST() {
+        const now = new Date();
+        const januaryOffset = new Date(now.getFullYear(), 0, 1).getTimezoneOffset();
+        const julyOffset = new Date(now.getFullYear(), 6, 1).getTimezoneOffset();
+        const stdOffset = Math.max(januaryOffset, julyOffset);
+        return now.getTimezoneOffset() < stdOffset;
+    }
+
+    function getJummahTimes() {
+        return isHoustonDST()
+            ? { first: '2', second: '3' }
+            : { first: '1', second: '2' };
+    }
+
     // Update header widget with prayer times
     function updateHeaderPrayerTimes(timings) {
         const prayers = {
@@ -94,6 +109,15 @@
                 }
             }
         });
+
+        // Update Jummah times in header based on DST
+        const jummah = getJummahTimes();
+        const jummahItem = document.querySelector('.prayer-times-header .jummah-item');
+        if (jummahItem) {
+            const spans = jummahItem.querySelectorAll('.prayer-time');
+            if (spans[0]) spans[0].innerHTML = `${jummah.first}<span class="colon">:</span>00 PM`;
+            if (spans[1]) spans[1].innerHTML = `${jummah.second}<span class="colon">:</span>00 PM`;
+        }
     }
 
     // Initialize on DOM load
