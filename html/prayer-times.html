@@ -185,7 +185,7 @@
                             <p class="location-name">Kyle Morrow Room</p>
                             <p class="location-sublabel">Fondren Library 3rd Floor</p>
                             <div class="location-img-placeholder">
-                                <span>Image coming soon</span>
+                                <img src="../image_files/kyle_morrow_room/kmr_1.jpg" alt="Kyle Morrow Room">
                             </div>
                         </div>
                         <div class="location-box" onclick="openLocationModal('Duncan PDR', 'Second Floor of West Servery', 'www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3464.9551055581933!2d-95.40104412401536!3d29.72105967508807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c07ebd5cc87f%3A0x7c1907be086dd71f!2sWest%20Servery!5e0!3m2!1sen!2sus!4v1771863918424!5m2!1sen!2sus')">
@@ -203,8 +203,11 @@
                             <button class="location-modal-close" onclick="closeLocationModal()">&times;</button>
                             <h2 class="location-modal-name" id="locationModalName"></h2>
                             <p class="location-modal-sublabel" id="locationModalSublabel"></p>
-                            <div class="location-modal-img-placeholder">
-                                <span>Image coming soon</span>
+                            <div class="location-modal-img-placeholder" id="locationModalImgPlaceholder">
+                                <span id="locationModalImgFallback">Image coming soon</span>
+                                <img id="locationModalImg" class="location-modal-img" alt="" style="display: none;">
+                                <button type="button" class="modal-img-arrow modal-img-arrow-left" id="locationModalPrev" aria-label="Previous photo" style="display: none;">&#10094;</button>
+                                <button type="button" class="modal-img-arrow modal-img-arrow-right" id="locationModalNext" aria-label="Next photo" style="display: none;">&#10095;</button>
                             </div>
                             <div class="location-modal-map">
                                 <iframe id="locationModalMap" src="" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -224,7 +227,7 @@
                             <p class="location-name">Prayer Room</p>
                             <p class="location-sublabel">Next to Rice Memorial Chapel</p>
                             <div class="location-img-placeholder">
-                                <span>Image coming soon</span>
+                                <img src="../image_files/prayer_room/pr_1.jpg" alt="Prayer Room">
                             </div>
                         </div>
                     </div>

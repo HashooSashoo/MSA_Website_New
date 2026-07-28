@@ -691,6 +691,15 @@ header {
     margin-top: 12px;
     color: #666;
     font-size: 14px;
+    overflow: hidden;
+}
+
+.location-img-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
 }
 
 /* Location Modal */
@@ -754,6 +763,7 @@ header {
 }
 
 .location-modal-img-placeholder {
+    position: relative;
     width: 100%;
     height: 200px;
     background: #d0d0d0;
@@ -764,6 +774,53 @@ header {
     color: #666;
     font-size: 14px;
     font-family: var(--font-primary);
+    overflow: hidden;
+}
+
+.location-modal-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.modal-img-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0, 0, 0, 0.45);
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s ease, background 0.2s ease;
+    z-index: 2;
+}
+
+.location-modal-img-placeholder:hover .modal-img-arrow {
+    opacity: 1;
+}
+
+.modal-img-arrow:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.modal-img-arrow-left {
+    left: 10px;
+}
+
+.modal-img-arrow-right {
+    right: 10px;
 }
 
 .location-modal-map {

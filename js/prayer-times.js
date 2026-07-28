@@ -275,10 +275,61 @@ document.addEventListener('DOMContentLoaded', function() {
 // LOCATION MODAL
 // ============================================
 
+// Locations with photo folders. Folder images must be named "<prefix>_1.jpg" ... "<prefix>_<count>.jpg".
+const LOCATION_PHOTOS = {
+    'Kyle Morrow Room': { folder: 'kyle_morrow_room', prefix: 'kmr', count: 3 },
+    'Prayer Room': { folder: 'prayer_room', prefix: 'pr', count: 5 }
+};
+
+let currentPhotoSet = null;
+let currentPhotoIndex = 0;
+
+function updateModalPhoto(useFade) {
+    const img = document.getElementById('locationModalImg');
+    if (!currentPhotoSet) return;
+
+    const src = `../image_files/${currentPhotoSet.folder}/${currentPhotoSet.prefix}_${currentPhotoIndex + 1}.jpg`;
+
+    if (useFade) {
+        img.style.opacity = '0';
+        const onLoad = function() {
+            img.style.opacity = '1';
+            img.removeEventListener('load', onLoad);
+        };
+        img.addEventListener('load', onLoad);
+        img.src = src;
+    } else {
+        img.src = src;
+        img.style.opacity = '1';
+    }
+}
+
 function openLocationModal(name, sublabel, mapEmbedUrl) {
     const overlay = document.getElementById('locationModalOverlay');
     document.getElementById('locationModalName').textContent = name;
     document.getElementById('locationModalSublabel').textContent = sublabel;
+
+    const img = document.getElementById('locationModalImg');
+    const fallback = document.getElementById('locationModalImgFallback');
+    const prevBtn = document.getElementById('locationModalPrev');
+    const nextBtn = document.getElementById('locationModalNext');
+
+    currentPhotoSet = LOCATION_PHOTOS[name] || null;
+    currentPhotoIndex = 0;
+
+    if (currentPhotoSet) {
+        img.alt = name;
+        updateModalPhoto(false);
+        img.style.display = 'block';
+        fallback.style.display = 'none';
+        prevBtn.style.display = 'flex';
+        nextBtn.style.display = 'flex';
+    } else {
+        img.style.display = 'none';
+        fallback.style.display = 'block';
+        prevBtn.style.display = 'none';
+        nextBtn.style.display = 'none';
+    }
 
     if (mapEmbedUrl) {
         const src = mapEmbedUrl.startsWith('http') ? mapEmbedUrl : 'https://' + mapEmbedUrl;
@@ -297,3 +348,24 @@ function closeLocationModal() {
     overlay.classList.remove('active');
     document.getElementById('locationModalMap').src = '';
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const prevBtn = document.getElementById('locationModalPrev');
+    const nextBtn = document.getElementById('locationModalNext');
+
+    if (prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            if (!currentPhotoSet) return;
+            currentPhotoIndex = (currentPhotoIndex - 1 + currentPhotoSet.count) % currentPhotoSet.count;
+            updateModalPhoto(true);
+        });
+
+        nextBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            if (!currentPhotoSet) return;
+            currentPhotoIndex = (currentPhotoIndex + 1) % currentPhotoSet.count;
+            updateModalPhoto(true);
+        });
+    }
+});
