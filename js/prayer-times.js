@@ -291,13 +291,15 @@ function updateModalPhoto(useFade) {
     const src = `../image_files/${currentPhotoSet.folder}/${currentPhotoSet.prefix}_${currentPhotoIndex + 1}.jpg`;
 
     if (useFade) {
+        img.style.transition = 'none';
         img.style.opacity = '0';
-        const onLoad = function() {
-            img.style.opacity = '1';
-            img.removeEventListener('load', onLoad);
-        };
-        img.addEventListener('load', onLoad);
         img.src = src;
+        // Force a synchronous style flush so the browser commits opacity:0
+        // before we re-enable the transition — otherwise the two opacity
+        // writes can collapse into one and the fade never plays.
+        void img.offsetHeight;
+        img.style.transition = 'opacity 0.5s ease';
+        img.style.opacity = '1';
     } else {
         img.src = src;
         img.style.opacity = '1';
